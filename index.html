@@ -3,56 +3,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AVEK</title>
-<meta name="description" content="AVEK makes games for Android: Neon Bastion, a roguelike tower defense, and Thornmarch, a dark-fantasy roguelite.">
+<meta name="description" content="AVEK makes games: Neon Bastion and Thornmarch for Android, and Glassmarch for PC.">
 <link rel="icon" href="neon-bastion/img/icon-32.png">
 <link rel="stylesheet" href="site.css">
+<body class="studio">
 
-<header class="hero">
-	<h1>AVEK</h1>
-	<div class="rule"></div>
-	<p class="sub">One person, making games for Android.</p>
-	<div class="stage">
-		<img class="turret" src="turret.svg" alt="" aria-hidden="true">
-		<div class="arc"></div>
-	</div>
+<header class="bar">
+	<a class="mark" href="index.html" aria-current="page">AVEK</a>
+	<nav class="games" aria-label="Games">
+		<a href="neon-bastion/index.html">Neon Bastion</a>
+		<a href="thornmarch/index.html">Thornmarch</a>
+		<a href="glassmarch/index.html">Glassmarch</a>
+	</nav>
 </header>
 
-<main>
-	<nav class="site-nav">
-		<a href="index.html" aria-current="page">AVEK</a>
-		<a href="neon-bastion/index.html">Neon Bastion</a>
-		<a href="neon-bastion/beta.html">Beta testing</a>
-		<a href="neon-bastion/support.html">Support</a>
-		<a href="thornmarch/index.html">Thornmarch</a>
-	</nav>
+<section class="intro">
+	<h1>Three games in the making.</h1>
+	<p>AVEK takes its name from two sets of initials, ours. Two games are on their way to
+	Android and one to PC.</p>
+</section>
 
-	<h2>What we are making</h2>
-	<div class="stack">
-		<article class="entry">
-			<h3><a href="neon-bastion/index.html">Neon Bastion</a></h3>
-			<p>A roguelike tower defense. You are not the builder — you are the tower.
-			Twenty-five stages, a Memory map that outlives every run, and no account to
-		make. Nothing you have to pay for. In testing on Google Play.</p>
-		</article>
-		<article class="entry">
-			<h3><a href="thornmarch/index.html">Thornmarch</a></h3>
-			<p>A dark-fantasy roguelite played with one thumb. You shoot only while you stand
-			still. Bind cursed patrons to your bow and seal pacts between them. In development.</p>
-		</article>
-	</div>
+<div class="plates">
+	<article class="plate">
+		<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 36 Q200 -12 400 36"/></svg>
+		<img class="emblem" src="turret.svg" alt="">
+		<h2><a href="neon-bastion/index.html">Neon Bastion</a></h2>
+		<p class="kind">Roguelike tower defense for Android</p>
+		<p class="pitch">You are not the builder. You are the tower: one crystal and a ring of light
+		holding back a broken digital world, with a Memory map that outlives every run.</p>
+		<p class="status">In closed testing on Google Play. Free, with nothing to buy.</p>
+		<p class="links"><a class="go" href="neon-bastion/index.html">About the game</a><a class="go" href="neon-bastion/beta.html">Join the test</a></p>
+	</article>
 
-	<div class="arc arc--divider"></div>
+	<article class="plate">
+		<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 22 H400"/><path d="M18 22 l9 -9 M50 22 l-9 9 M82 22 l9 -9 M114 22 l-9 9 M146 22 l9 -9 M178 22 l-9 9 M210 22 l9 -9 M242 22 l-9 9 M274 22 l9 -9 M306 22 l-9 9 M338 22 l9 -9 M370 22 l-9 9"/></svg>
+		<img class="emblem" src="thorn.svg" alt="">
+		<h2><a href="thornmarch/index.html">Thornmarch</a></h2>
+		<p class="kind">Dark-fantasy roguelite for Android</p>
+		<p class="pitch">Played with one thumb. You shoot only while you stand still, so every step
+		is a choice. Bind cursed patrons to your bow and seal pacts between them.</p>
+		<p class="status">In development. Not yet on Google Play.</p>
+		<p class="links"><a class="go" href="thornmarch/index.html">About the game</a></p>
+	</article>
 
-	<h2>Testing</h2>
-	<p>Neon Bastion is in closed testing and needs people on real phones. It takes a
-	Google account, a few runs over a couple of weeks, and one honest message about
-	what broke. <a href="neon-bastion/beta.html">How to join</a>.</p>
+	<article class="plate">
+		<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><polyline class="glow" points="0,30 34,14 58,24 96,6 130,20 152,12 196,28 228,10 262,22 290,8 330,26 362,12 400,22"/><polyline points="0,36 48,26 96,34 152,22 210,34 262,28 330,36 400,30" opacity=".45"/></svg>
+		<img class="emblem" src="glass.svg" alt="">
+		<h2><a href="glassmarch/index.html">Glassmarch</a></h2>
+		<p class="kind">Action RPG for PC</p>
+		<p class="pitch">An expedition sets out to reclaim the Glassmarch. Your gear decides what you
+		can do in a fight, and a party of up to four, friends and companions together.</p>
+		<p class="status">An early prototype. No release date yet.</p>
+		<p class="links"><a class="go" href="glassmarch/index.html">About the game</a></p>
+	</article>
+</div>
 
-	<h2>Getting in touch</h2>
-	<p>Bugs, questions, or anything about your data:
-	<a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>.
-	Each game keeps its own privacy policy and data page, linked from its own page.</p>
+<div class="after">
+	<section>
+		<h2>Help test Neon Bastion</h2>
+		<p>Neon Bastion is in closed testing and needs people on real phones. It takes a Google
+		account, a few runs over a couple of weeks, and one honest message about what broke.
+		<a href="neon-bastion/beta.html">How to join</a>.</p>
+	</section>
+	<section>
+		<h2>Get in touch</h2>
+		<p>Bugs, questions, or anything about your data:
+		<a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>. Each game keeps
+		its own privacy policy and data page, linked from its own page.</p>
+	</section>
+</div>
 
-	<footer>AVEK Solutions</footer>
-</main>
+<footer>AVEK Solutions</footer>
+</body>
 </html>

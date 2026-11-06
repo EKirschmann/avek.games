@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="A bow wrapped in thorns, with an arrow nocked">
+  <g fill="none" stroke="#e86f4f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 14 C78 34 78 86 40 106"/>
+    <path d="M40 14 L40 106" stroke-width="1.2" opacity=".7"/>
+    <path d="M22 60 H104 M96 53 L104 60 L96 67 M22 60 l-6 -6 M22 60 l-6 6"/>
+    <path d="M52 22 l7 -4 M62 33 l7 -2 M67 46 l7 0 M67 74 l7 0 M62 87 l7 2 M52 98 l7 4" opacity=".85"/>
+  </g>
+</svg>

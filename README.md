@@ -15,6 +15,9 @@ must never be copied here.
 /site.css              shared styling
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
+/thornmarch/            index, support, privacy, data
+/glassmarch/            index (PC, early prototype; no policy pages until it is distributed)
+/turret.svg, thorn.svg, glass.svg   one emblem per game, drawn in its accent
 ```
 
 Each game gets its own folder. One `app-ads.txt` at the root covers every game, because the

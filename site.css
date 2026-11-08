@@ -115,28 +115,71 @@ ol.steps .actions { margin-top: .9rem; }
 .hero .actions { justify-content: center; margin-top: 1.6rem; }
 
 /* ---- studio page --------------------------------------------------------- */
-.studio .intro { max-width: 1180px; margin: 0 auto; padding: clamp(48px, 9vw, 104px) 24px clamp(32px, 5vw, 56px); }
-.studio .intro h1 { font-size: clamp(2.2rem, 5.4vw, 3.4rem); max-width: 24ch; color: #eaf4fa; }
-.studio .intro p { color: var(--dim); font-size: 1.12rem; margin: 1rem 0 0; max-width: 46ch; }
+.studio .intro { max-width: 1180px; margin: 0 auto; padding: clamp(36px, 6vw, 72px) 24px clamp(12px, 2vw, 24px); text-align: center; }
+.studio .intro h1 { font-size: clamp(2.2rem, 5.4vw, 3.6rem); color: #eaf4fa; }
+.studio .intro p { color: var(--dim); font-size: 1.12rem; margin: 1rem auto 0; max-width: 46ch; }
 
-.plates { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.plate { --accent: var(--p); padding: 0 0 8px; display: flex; flex-direction: column; align-items: flex-start; }
-.plate:nth-child(1) { --p: var(--nb); }
-.plate:nth-child(2) { --p: var(--tm); }
-.plate:nth-child(3) { --p: var(--gm); }
 .horizon { display: block; width: 100%; height: 34px; overflow: visible; color: var(--accent); }
 .horizon path, .horizon polyline { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .horizon .glow { filter: drop-shadow(0 0 6px currentColor); }
-.plate .emblem { display: block; width: 84px; height: 84px; margin: 26px 0 18px; }
-.plate h2 { margin: 0; font-size: clamp(2rem, 3vw, 2.4rem); color: #eef6fb; letter-spacing: .02em; }
-.plate h2 a { color: inherit; text-decoration: none; }
-.plate h2 a:hover { color: var(--p); }
-.plate .kind { margin: .35rem 0 1.1rem; color: var(--p); font-family: Rajdhani, sans-serif; font-weight: 600; font-size: 1.08rem; letter-spacing: .03em; }
-.plate .pitch { color: #b9cad6; }
-.plate .status { color: var(--dim); font-size: .95rem; padding-top: .9rem; border-top: 1px solid var(--line); margin: auto 0 .5rem; align-self: stretch; }
-.plate .links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: .4rem 0 0; }
-.plate .go { display: inline-flex; align-items: center; min-height: 48px; font-family: Rajdhani, sans-serif; font-weight: 600; font-size: 1.06rem; letter-spacing: .02em; color: var(--p); }
-.plate .go:hover { color: #fff; }
+
+/* The rail: three games side by side, the middle one in full and its neighbours faded at
+   the edges. Each card's picture is cut along its game's own horizon: Neon Bastion's arc,
+   Thornmarch's barbed line, Glassmarch's facets. A soft light in the focused game's accent
+   sits behind the rail and follows it. */
+@property --glow { syntax: "<color>"; inherits: true; initial-value: #5ef2f0; }
+.showcase { --card: min(860px, calc(100vw - 2 * max(72px, 14vw))); position: relative; isolation: isolate; padding: 8px 0 0; transition: --glow .6s; }
+.showcase::before {
+	content: ""; position: absolute; inset: -60px 0 auto; height: 620px; pointer-events: none; z-index: -1;
+	background: radial-gradient(50% 55% at 50% 45%, color-mix(in srgb, var(--glow) 16%, transparent), transparent 70%);
+}
+.rail {
+	display: flex; gap: clamp(16px, 2.4vw, 32px); overflow-x: auto; overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory; scrollbar-width: none;
+	padding: 18px calc((100% - var(--card)) / 2) 24px;
+	-webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+	mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+.rail::-webkit-scrollbar { display: none; }
+.game { --accent: var(--p); flex: 0 0 var(--card); scroll-snap-align: center; transition: opacity .45s, transform .45s, filter .45s; }
+.nb-card { --p: var(--nb); }
+.tm-card { --p: var(--tm); }
+.gm-card { --p: var(--gm); }
+.showcase.live .game:not(.is-current) { opacity: .35; transform: scale(.93); filter: saturate(.45); cursor: pointer; }
+.showcase.live .game:not(.is-current):hover { opacity: .55; }
+.shot { position: relative; display: block; aspect-ratio: 21 / 9; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: cover;
+	-webkit-mask-image: linear-gradient(180deg, #000 72%, transparent);
+	mask-image: linear-gradient(180deg, #000 72%, transparent); }
+.shot .horizon { position: absolute; top: 0; left: 0; }
+.nb-card .shot img { object-position: 50% 40%; clip-path: polygon(0% 30.6px, 6.25% 25.8px, 12.5% 21.7px, 18.75% 18.2px, 25% 15.3px, 31.25% 13.1px, 37.5% 11.5px, 43.75% 10.5px, 50% 10.2px, 56.25% 10.5px, 62.5% 11.5px, 68.75% 13.1px, 75% 15.3px, 81.25% 18.2px, 87.5% 21.7px, 93.75% 25.8px, 100% 30.6px, 100% 100%, 0% 100%); }
+.tm-card .shot img { object-position: 50% 55%; clip-path: polygon(0% 18.7px, 100% 18.7px, 100% 100%, 0% 100%); }
+.gm-card .shot img { object-position: 20% 58%; clip-path: polygon(0% 25.5px, 8.5% 11.9px, 14.5% 20.4px, 24% 5.1px, 32.5% 17.0px, 38% 10.2px, 49% 23.8px, 57% 8.5px, 65.5% 18.7px, 72.5% 6.8px, 82.5% 22.1px, 90.5% 10.2px, 100% 18.7px, 100% 100%, 0% 100%); }
+.about { display: grid; grid-template-columns: 5fr 7fr; gap: 12px 40px; margin-top: -28px; position: relative; padding: 0 4px; }
+.game h2 { margin: 0; font-size: clamp(2rem, 3.6vw, 2.9rem); color: #eef6fb; letter-spacing: .02em; }
+.game h2 a { color: inherit; text-decoration: none; }
+.game h2 a:hover { color: var(--p); }
+.tm-card h2 { font-family: "Pirata One", Rajdhani, serif; font-weight: 400; letter-spacing: .01em; }
+.game .kind { margin: .4rem 0 0; color: var(--p); font-family: Rajdhani, sans-serif; font-weight: 600; font-size: 1.08rem; letter-spacing: .03em; }
+.game .pitch { color: #b9cad6; margin: .2rem 0 .8rem; }
+.game .status { color: var(--dim); font-size: .95rem; margin: 0 0 .4rem; }
+.game .links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: .6rem 0 0; }
+.game .go { display: inline-flex; align-items: center; min-height: 48px; font-family: Rajdhani, sans-serif; font-weight: 600; font-size: 1.06rem; letter-spacing: .02em; color: var(--p); }
+.game .go:hover { color: #fff; }
+.steer { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 8px; }
+.steer[hidden] { display: none; }
+.step {
+	width: 48px; height: 48px; display: grid; place-items: center; cursor: pointer;
+	color: var(--paper); background: rgba(215, 230, 240, .06); border: 1px solid var(--line); border-radius: 50%;
+}
+.step:hover { border-color: var(--glow); color: #fff; }
+.step svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dots { display: flex; gap: 6px; }
+.dots button { width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.dots button::after { content: ""; width: 22px; height: 3px; border-radius: 2px; background: var(--line); transition: background .3s, width .3s; }
+.dots button:nth-child(1) { --d: var(--nb); } .dots button:nth-child(2) { --d: var(--tm); } .dots button:nth-child(3) { --d: var(--gm); }
+.dots button[aria-current="true"]::after { width: 34px; background: var(--d); }
+@media (prefers-reduced-motion: reduce) { .game, .showcase { transition: none; } }
 
 .after { max-width: 1180px; margin: clamp(64px, 9vw, 112px) auto 0; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; }
 .after h2 { margin-top: 0; color: #eef6fb; font-size: 1.5rem; }
@@ -214,9 +257,6 @@ footer a { color: var(--dim); }
 	.hero .rule { animation-delay: .12s; }
 	.hero .tagline { animation-delay: .22s; }
 	.hero .stage { animation: rise 1.5s cubic-bezier(.2, .7, .3, 1) .3s both; }
-	.plate .horizon { animation: draw 1.2s cubic-bezier(.3, .6, .2, 1) both; }
-	.plate:nth-child(2) .horizon { animation-delay: .15s; }
-	.plate:nth-child(3) .horizon { animation-delay: .3s; }
 }
 @keyframes resolve { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: none; } }
 @keyframes rise { from { opacity: 0; transform: translateY(42px); } to { opacity: 1; transform: none; } }
@@ -224,7 +264,6 @@ footer a { color: var(--dim); }
 
 /* ---- tablets: games stack, the bar stays one row ------------------------- */
 @media (max-width: 960px) {
-	.plates { grid-template-columns: 1fr; gap: 56px; max-width: 640px; }
 	.after { grid-template-columns: 1fr; max-width: 640px; }
 	.studio .intro { max-width: 640px; }
 	.studio footer { width: min(592px, calc(100% - 48px)); }
@@ -240,9 +279,8 @@ footer a { color: var(--dim); }
 	.games a { justify-content: center; min-height: 46px; font-size: 1rem; padding: 0; border-image: linear-gradient(90deg, transparent 36%, var(--g) 36% 64%, transparent 64%) 1; }
 	.games a:hover, .games a[aria-current] { border-image: linear-gradient(var(--g), var(--g)) 1; }
 	main { padding: 1.8rem 16px 80px; }
-	.studio .intro, .plates, .after { padding-left: 16px; padding-right: 16px; }
+	.studio .intro, .after { padding-left: 16px; padding-right: 16px; }
 	.studio footer { width: calc(100% - 32px); }
-	.plate .emblem { width: 68px; height: 68px; margin: 20px 0 14px; }
 	.sub { gap: 1.25rem; margin-bottom: 2rem; overflow-x: auto; scrollbar-width: none; }
 	.sub::-webkit-scrollbar { display: none; }
 	.sub a { padding: 13px 0 11px; }
@@ -305,22 +343,6 @@ figure.clip { margin: 1.6rem 0 2rem; }
 .gm footer, .tm footer { max-width: var(--measure); }
 .gm figure.clip { max-width: 760px; }
 
-/* Glassmarch's plate: its faceted horizon is the cut edge of a pane, and through the pane
-   is the game itself. The pane stands exactly as tall as horizon plus emblem in the other
-   plates, so the three names stay level. */
-.plate .pane { position: relative; align-self: stretch; height: 162px; }
-.plate .pane img {
-	display: block; width: 100%; height: 100%; object-fit: cover; object-position: 18% 58%;
-	clip-path: polygon(0% 25.5px, 8.5% 11.9px, 14.5% 20.4px, 24% 5.1px, 32.5% 17.0px, 38% 10.2px, 49% 23.8px, 57% 8.5px, 65.5% 18.7px, 72.5% 6.8px, 82.5% 22.1px, 90.5% 10.2px, 100% 18.7px, 100% 100%, 0% 100%);
-	-webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
-	mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
-}
-.plate .pane .horizon { position: absolute; top: 0; left: 0; }
-@media (prefers-reduced-motion: no-preference) {
-	.plate .pane { animation: draw 1.2s cubic-bezier(.3, .6, .2, 1) .3s both; }
-	.plate .pane .horizon { animation: none; }
-}
-@media (max-width: 640px) { .plate .pane { height: 136px; } }
 
 /* ---- Thornmarch: the game's own blackletter, phone-shaped frames --------
    Headings take Pirata One, the face the game sets its own titles in. It is a phone
@@ -344,7 +366,24 @@ thead th { color: var(--dim); font-weight: 400; font-size: .92rem; }
 tbody th { font-family: "Pirata One", serif; font-weight: 400; font-size: 1.35rem; }
 .p-ember { color: #ff8a3d; } .p-briar { color: #7fc96a; } .p-rime { color: #a9dcff; }
 .p-storm { color: #f2cf5b; } .p-blight { color: #b4c94a; } .p-umbral { color: #b39bff; }
+.gm main, .tm main { padding-bottom: 8px; }
 @media (max-width: 640px) {
-	.phones { grid-template-columns: 1fr 1fr; gap: 16px; }
+	/* On a phone the tall frames become a row you swipe through, the next one peeking in. */
+	.phones { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; scrollbar-width: none; margin: 1.2rem -16px 0; padding: 0 16px 6px; }
+	.phones::-webkit-scrollbar { display: none; }
+	.phones figure { flex: 0 0 62%; scroll-snap-align: start; }
 	.tm h2 { font-size: 1.85rem; }
+	/* The key art is brightest where the words sit, so the phone opening is shorter and
+	   darker at the top. */
+	.tm .vista picture, .tm .vista img { height: min(68svh, 560px); }
+	.tm .vista::after { background: linear-gradient(180deg, rgba(4, 7, 10, .82) 0%, rgba(4, 7, 10, .35) 42%, rgba(4, 7, 10, 0) 62%, var(--void) 100%); }
+	.tm .vista .lede { font-size: 1.02rem; }
+}
+
+@media (max-width: 760px) {
+	.showcase { --card: calc(100vw - 92px); }
+	.shot { aspect-ratio: 4 / 3; }
+	.rail { gap: 12px; }
+	.about { grid-template-columns: 1fr; margin-top: -20px; }
+	.rail { -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
 }

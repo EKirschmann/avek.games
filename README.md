@@ -13,6 +13,7 @@ must never be copied here.
 /app-ads.txt           NOT YET PRESENT - see below
 /privacy.html          legacy redirect, do not delete (see below)
 /site.css              shared styling
+/home.css              cinematic homepage, responsive game cards and motion styles
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
 /thornmarch/            index, devlog, support, privacy, data
@@ -20,12 +21,19 @@ must never be copied here.
 /glassmarch/            index and devlog (PC, early prototype; no policy pages until it is distributed)
 /glassmarch/media/      web stills (WebP, 1200 and 2000 wide) and muted WebM loops with posters
 /loops.js               plays muted loops only while on screen; none under reduced motion
-/rail.js                the home page game carousel; a plain swipe row without it
+/rail.js                wrapping game carousel; a plain swipe row without JavaScript
+/studio.js              homepage effects, pause control and reduced-motion support
 /turret.svg, thorn.svg, glass.svg   one emblem per game, drawn in its accent
 ```
 
 Each game gets its own folder. One `app-ads.txt` at the root covers every game, because the
 AdMob publisher ID is per account and the file is read per root domain.
+
+The homepage uses existing public artwork. Its carousel wraps with buttons, keyboard
+arrows, mouse drag, and touch swipes, without auto-advancing. Hash links select a game;
+the default remains Thornmarch. Decorative shield pulses, embers, and glass fragments
+can be paused, respect reduced-motion preferences, and pause when offscreen or hidden.
+All effects run locally without third-party services or stored preferences.
 
 ## Play Console fields
 

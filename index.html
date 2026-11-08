@@ -1,15 +1,20 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AVEK</title>
-<meta name="description" content="AVEK makes games: Neon Bastion and Thornmarch for Android, and Glassmarch for PC.">
+<title>AVEK — Three games in the making</title>
+<meta name="description" content="Two makers, three worlds. Explore Neon Bastion and Thornmarch for Android, and Glassmarch for PC.">
+<meta name="theme-color" content="#04070a">
 <link rel="icon" href="neon-bastion/img/icon-32.png">
+<link rel="preload" href="fonts/Rajdhani-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="home.css">
+</head>
 <body class="studio">
-
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="bar">
-	<a class="mark" href="index.html" aria-current="page">AVEK</a>
+	<a class="mark" href="index.html" aria-current="page">AVEK<span class="mark-line" aria-hidden="true"></span></a>
 	<nav class="games" aria-label="Games">
 		<a href="neon-bastion/index.html">Neon Bastion</a>
 		<a href="thornmarch/index.html">Thornmarch</a>
@@ -17,101 +22,97 @@
 	</nav>
 </header>
 
-<section class="intro">
-	<h1>Three games in the making.</h1>
-	<p>AVEK takes its name from two sets of initials, ours. Two games are on their way to
-	Android and one to PC.</p>
-</section>
-
-<!-- The three games on one rail. The one in the middle is shown in full; its neighbours
-     wait faded at the edges. Without script it is a plain swipeable row. -->
-<section class="showcase" aria-label="Our games" aria-roledescription="carousel">
-	<div class="rail">
-		<article class="game nb-card" id="neon-bastion" aria-roledescription="slide" aria-label="Neon Bastion, 1 of 3">
-			<a class="shot" href="neon-bastion/index.html" tabindex="-1" aria-hidden="true">
-				<img src="neon-bastion/img/feature.webp" width="1024" height="500" alt="" decoding="async">
-				<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none"><path class="glow" d="M0 36 Q200 -12 400 36"/></svg>
-			</a>
-			<div class="about">
-				<div class="name">
-					<h2><a href="neon-bastion/index.html">Neon Bastion</a></h2>
-					<p class="kind">Roguelike tower defense for Android</p>
-				</div>
-				<div class="more">
-					<p class="pitch">You are not the builder. You are the tower: one crystal and a ring of light
-					holding back a broken digital world, with a Memory map that outlives every run.</p>
-					<p class="status">Free, in closed testing on Google Play.</p>
-					<p class="links"><a class="btn" href="neon-bastion/beta.html">Join the test</a><a class="go" href="neon-bastion/index.html">About Neon Bastion</a></p>
-				</div>
-			</div>
-		</article>
-
-		<article class="game tm-card" id="thornmarch" aria-roledescription="slide" aria-label="Thornmarch, 2 of 3">
-			<a class="shot" href="thornmarch/index.html" tabindex="-1" aria-hidden="true">
-				<img src="thornmarch/media/s01-1200.webp" width="1200" height="675" alt="" decoding="async">
-				<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none"><path class="glow" d="M0 22 H400"/><path d="M18 22 l9 -9 M50 22 l-9 9 M82 22 l9 -9 M114 22 l-9 9 M146 22 l9 -9 M178 22 l-9 9 M210 22 l9 -9 M242 22 l-9 9 M274 22 l9 -9 M306 22 l-9 9 M338 22 l9 -9 M370 22 l-9 9"/></svg>
-			</a>
-			<div class="about">
-				<div class="name">
-					<h2><a href="thornmarch/index.html">Thornmarch</a></h2>
-					<p class="kind">Dark-fantasy roguelite for Android</p>
-				</div>
-				<div class="more">
-					<p class="pitch">Played with one thumb. You shoot only while you stand still, so every step
-					is a choice. Six cursed realms, six rival patrons, and a hero who will not fall the same
-					way twice.</p>
-					<p class="status">An early build in internal testing on Google Play.</p>
-					<p class="links"><a class="btn alt" href="thornmarch/index.html">See Thornmarch</a></p>
-				</div>
-			</div>
-		</article>
-
-		<article class="game gm-card" id="glassmarch" aria-roledescription="slide" aria-label="Glassmarch, 3 of 3">
-			<a class="shot" href="glassmarch/index.html" tabindex="-1" aria-hidden="true">
-				<img src="glassmarch/media/s01-1200.webp" width="1200" height="675" alt="" decoding="async">
-				<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none"><polyline class="glow" points="0,30 34,14 58,24 96,6 130,20 152,12 196,28 228,10 262,22 290,8 330,26 362,12 400,22"/></svg>
-			</a>
-			<div class="about">
-				<div class="name">
-					<h2><a href="glassmarch/index.html">Glassmarch</a></h2>
-					<p class="kind">Co-op action RPG for PC</p>
-				</div>
-				<div class="more">
-					<p class="pitch">You and up to three friends relight the Glass Road, a broken chain of ancient
-					gates, one shard at a time. You fight with whatever gear you carry.</p>
-					<p class="status">An early prototype. No release date yet.</p>
-					<p class="links"><a class="btn alt" href="glassmarch/index.html">See Glassmarch</a></p>
-				</div>
-			</div>
-		</article>
-	</div>
-	<div class="steer" hidden>
-		<button class="step" type="button" data-step="-1" aria-label="Previous game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-		<div class="dots">
-			<button type="button" data-to="0" aria-label="Neon Bastion"></button>
-			<button type="button" data-to="1" aria-label="Thornmarch"></button>
-			<button type="button" data-to="2" aria-label="Glassmarch"></button>
+<main class="studio-main" id="main">
+	<section class="opening" aria-labelledby="studio-title">
+		<div class="opening-light" aria-hidden="true"></div>
+		<div class="intro">
+			<h1 id="studio-title">Three games<br>in the making.</h1>
+			<p>One crystal to defend. Six realms to survive.<br>A broken road to relight.</p>
+			<a class="btn explore" href="#our-games">Explore the games</a>
 		</div>
-		<button class="step" type="button" data-step="1" aria-label="Next game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-	</div>
-</section>
-
-<div class="after">
-	<section>
-		<h2>Help test Neon Bastion</h2>
-		<p>Neon Bastion is in closed testing and needs people on real phones. It takes a Google
-		account, a few runs over a couple of weeks, and one honest message about what broke.</p>
-		<p class="actions"><a class="btn" href="neon-bastion/beta.html">Join the test</a></p>
+		<div class="worlds" aria-label="A glimpse of our three games">
+			<a class="world world-nb" href="#neon-bastion" aria-label="Explore Neon Bastion">
+				<div class="world-art"><img src="neon-bastion/img/feature.webp" width="1024" height="500" fetchpriority="high" decoding="async" alt="Neon Bastion key art: a cyan crystal and its glowing barrier below dark towers."></div>
+				<div class="world-effects" aria-hidden="true"><i class="barrier barrier-one"></i><i class="barrier barrier-two"></i><img class="world-symbol" src="turret.svg" width="80" height="80" alt=""></div>
+				<span class="world-name">Neon Bastion</span>
+			</a>
+			<a class="world world-tm" href="#thornmarch" aria-label="Explore Thornmarch">
+				<div class="world-art"><img src="thornmarch/media/s01-1200.webp" width="1200" height="675" decoding="async" alt="A Thornmarch hero firing a burning arrow as demons close in among red crystals."></div>
+				<div class="world-effects" aria-hidden="true"><i class="ember e1"></i><i class="ember e2"></i><i class="ember e3"></i><i class="ember e4"></i><i class="ember e5"></i><img class="world-symbol" src="thorn.svg" width="80" height="80" alt=""></div>
+				<span class="world-name">Thornmarch</span>
+			</a>
+			<a class="world world-gm" href="#glassmarch" aria-label="Explore Glassmarch">
+				<div class="world-art"><img src="glassmarch/media/s01-1200.webp" width="1200" height="675" decoding="async" alt="Glassmarch's walled hill town, towers and waterwheel overlooking a valley at golden hour."></div>
+				<div class="world-effects" aria-hidden="true"><i class="shard s1"></i><i class="shard s2"></i><i class="shard s3"></i><img class="world-symbol" src="glass.svg" width="80" height="80" alt=""></div>
+				<span class="world-name">Glassmarch</span>
+			</a>
+		</div>
+		<div class="opening-foot">
+			<p>Independent games for Android and PC.</p>
+			<button class="motion-toggle" type="button" aria-pressed="false" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg><span>Pause motion</span></button>
+		</div>
 	</section>
-	<section>
-		<h2>Get in touch</h2>
-		<p>Bugs, questions, or anything about your data:
-		<a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>. Each game keeps
-		its own privacy policy and data page, linked from its own page.</p>
-	</section>
-</div>
 
-<footer>AVEK Solutions</footer>
+	<section class="showcase" id="our-games" aria-labelledby="games-title" aria-roledescription="carousel" aria-describedby="rail-help">
+		<div class="section-top">
+			<div><p class="section-note">Made by AVEK</p><h2 id="games-title">Find your world.</h2></div>
+			<p class="collection-note">Three different ways to keep going.</p>
+		</div>
+		<p class="visually-hidden" id="rail-help">Swipe to browse. With the carousel focused, use the left and right arrow keys. The games wrap in both directions.</p>
+		<div class="rail" tabindex="0" aria-label="Browse games">
+			<article class="game nb-card" id="neon-bastion" role="group" aria-roledescription="slide" aria-label="Neon Bastion, 1 of 3">
+				<div class="shot">
+					<img src="neon-bastion/img/feature.webp" width="1024" height="500" loading="lazy" decoding="async" alt="A cyan crystal projects a curved shield across Neon Bastion's dark fortress.">
+					<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 36 Q200 -12 400 36"/></svg>
+					<span class="platform">Android</span>
+				</div>
+				<div class="about">
+					<div class="name"><img class="game-emblem" src="turret.svg" width="44" height="44" alt=""><p class="kind">Roguelike tower defense</p><h3><a href="neon-bastion/index.html">Neon Bastion</a></h3></div>
+					<div class="more"><p class="pitch">You are not the builder. You are the tower. One crystal and a ring of light hold back a broken digital world, with a Memory map that outlives every run.</p><p class="status"><span aria-hidden="true"></span>Free, in closed testing on Google Play.</p><p class="links"><a class="btn" href="neon-bastion/beta.html">Join the test</a><a class="go" href="neon-bastion/index.html">About Neon Bastion</a></p></div>
+				</div>
+			</article>
+			<article class="game tm-card" id="thornmarch" role="group" aria-roledescription="slide" aria-label="Thornmarch, 2 of 3">
+				<div class="shot">
+					<img src="thornmarch/media/s01-1200.webp" srcset="thornmarch/media/s01-1200.webp 1200w, thornmarch/media/s01-2000.webp 2000w" sizes="(max-width: 760px) 86vw, 76vw" width="1200" height="675" loading="lazy" decoding="async" alt="A hero in red and black looses a burning arrow at demons in Thornmarch's Ember Deep.">
+					<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 22 H400"/><path d="M18 22 l9 -9 M50 22 l-9 9 M82 22 l9 -9 M114 22 l-9 9 M146 22 l9 -9 M178 22 l-9 9 M210 22 l9 -9 M242 22 l-9 9 M274 22 l9 -9 M306 22 l-9 9 M338 22 l9 -9 M370 22 l-9 9"/></svg>
+					<span class="platform">Android</span>
+				</div>
+				<div class="about">
+					<div class="name"><img class="game-emblem" src="thorn.svg" width="44" height="44" alt=""><p class="kind">Dark-fantasy roguelite</p><h3><a href="thornmarch/index.html">Thornmarch</a></h3></div>
+					<div class="more"><p class="pitch">Move to dodge. Stand still to shoot. Six cursed realms, six rival patrons, and a hero who will not fall the same way twice. Played with one thumb.</p><p class="status"><span aria-hidden="true"></span>An early build in internal testing on Google Play.</p><p class="links"><a class="btn" href="thornmarch/index.html">See Thornmarch</a></p></div>
+				</div>
+			</article>
+			<article class="game gm-card" id="glassmarch" role="group" aria-roledescription="slide" aria-label="Glassmarch, 3 of 3">
+				<div class="shot">
+					<img src="glassmarch/media/s01-1200.webp" srcset="glassmarch/media/s01-1200.webp 1200w, glassmarch/media/s01-2000.webp 2000w" sizes="(max-width: 760px) 86vw, 76vw" width="1200" height="675" loading="lazy" decoding="async" alt="Golden light falls on a walled town and its waterwheel above Glassmarch's valley.">
+					<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><polyline class="glow" points="0,30 34,14 58,24 96,6 130,20 152,12 196,28 228,10 262,22 290,8 330,26 362,12 400,22"/></svg>
+					<span class="platform">PC</span>
+				</div>
+				<div class="about">
+					<div class="name"><img class="game-emblem" src="glass.svg" width="44" height="44" alt=""><p class="kind">Co-op action RPG</p><h3><a href="glassmarch/index.html">Glassmarch</a></h3></div>
+					<div class="more"><p class="pitch">You and up to three friends relight the Glass Road, a broken chain of ancient gates, one shard at a time. You fight with whatever gear you carry.</p><p class="status"><span aria-hidden="true"></span>An early prototype. No release date yet.</p><p class="links"><a class="btn" href="glassmarch/index.html">See Glassmarch</a></p></div>
+				</div>
+			</article>
+		</div>
+		<div class="steer" hidden>
+			<span class="rail-count" aria-hidden="true"><span class="current-count">02</span><span class="count-rule"></span>03</span>
+			<div class="dots" aria-label="Choose a game"><button type="button" data-to="0" aria-label="Show Neon Bastion"></button><button type="button" data-to="1" aria-label="Show Thornmarch"></button><button type="button" data-to="2" aria-label="Show Glassmarch"></button></div>
+			<div class="rail-arrows"><button class="step" type="button" data-step="-1" aria-label="Previous game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6M8 12h12"/></svg></button><button class="step" type="button" data-step="1" aria-label="Next game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6l6 6-6 6M16 12H4"/></svg></button></div>
+		</div>
+		<p class="visually-hidden rail-announcement" aria-live="polite" aria-atomic="true"></p>
+	</section>
+
+	<section class="studio-story reveal" id="studio" aria-labelledby="makers-title">
+		<div class="story-mark" aria-hidden="true"><svg viewBox="0 0 400 150" fill="none"><path class="story-nb" d="M0 138 Q200 -100 400 138"/><path class="story-tm" d="M0 88H400M60 88l15-18M130 88l-15 18M200 88l15-18M270 88l-15 18M340 88l15-18"/><path class="story-gm" d="M0 122L50 70L88 100L145 48L200 112L250 62L310 105L355 55L400 122"/></svg></div>
+		<div><h2 id="makers-title">Two makers.<br>Still making.</h2><p>AVEK takes its name from two sets of initials, ours. We’re building two games for Android and one for PC. They’re at different stages, and we’ll show you where each one stands.</p></div>
+	</section>
+	<section class="test-invite reveal" aria-labelledby="test-title">
+		<div><p class="section-note">Play a part</p><h2 id="test-title">Help test Neon Bastion.</h2><p>A Google account, a few runs on a real phone, and one honest message about what broke. That’s how you help us make it better.</p><a class="btn" href="neon-bastion/beta.html">Join the test</a></div>
+		<img src="turret.svg" width="200" height="200" loading="lazy" decoding="async" alt="" aria-hidden="true">
+	</section>
+</main>
+<footer class="studio-footer"><div><a class="footer-mark" href="index.html">AVEK</a><p>AVEK Solutions</p></div><div class="footer-contact"><p>Questions, bugs, or something about your data?</p><a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a><p class="footer-note">Each game’s support and privacy pages are linked from its own page.</p></div><a class="back-top" href="#main">Back to top</a></footer>
 <script src="rail.js" defer></script>
+<script src="studio.js" defer></script>
 </body>
 </html>

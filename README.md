@@ -20,6 +20,7 @@ must never be copied here.
 /glassmarch/            index and devlog (PC, early prototype; no policy pages until it is distributed)
 /glassmarch/media/      web stills (WebP, 1200 and 2000 wide) and muted WebM loops with posters
 /loops.js               plays muted loops only while on screen; none under reduced motion
+/rail.js                the home page game carousel; a plain swipe row without it
 /turret.svg, thorn.svg, glass.svg   one emblem per game, drawn in its accent
 ```
 
@@ -44,11 +45,11 @@ AdMob publisher ID is per account and the file is read per root domain.
 - **`app-ads.txt` is deliberately absent.** It must be the exact publisher line issued by
   AdMob, at this domain's root, and the domain must be the one named as the developer
   website on the listing. Do not invent a publisher ID. Allow about 24 hours for the crawl.
-- **Do not delete `/privacy.html`.** Released builds of Neon Bastion have
-  `https://ekirschmann.github.io/neon-bastion-public/privacy.html` compiled in
-  (`scripts/title.gd`). Setting a custom domain makes GitHub redirect that to
-  `https://avek.games/privacy.html`, and this stub forwards it to the real policy. It can go
-  once no supported build still carries the old URL.
+- **`/privacy.html` is a legacy stub.** Neon Bastion builds before v0.104.0 opened
+  `https://ekirschmann.github.io/neon-bastion-public/privacy.html`. That address stopped
+  resolving when this repository was renamed from `neon-bastion-public` to `avek.games` on
+  November 8, 2026; every tester was on v0.104.0 or later, which links to
+  `https://avek.games/neon-bastion/privacy.html` directly. The stub is harmless and can stay.
 - **The images in `neon-bastion/img/` are already-public Play listing assets**, resized
   and recompressed from the game repository's `store/listing-v0104/` captures and
   `assets/icon.png`. They are the only game material that belongs here. They are current

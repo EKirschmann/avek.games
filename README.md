@@ -13,7 +13,7 @@ must never be copied here.
 /app-ads.txt           NOT YET PRESENT - see below
 /privacy.html          legacy redirect, do not delete (see below)
 /site.css              shared styling
-/beta/                 beta-request form; activation requires verified Cloudflare setup
+/beta/                 shared community signup, per-game testing steps and private request form
 /website-privacy.html   website requests, email forwarding, spam protection and providers
 /home.css              cinematic homepage, responsive game cards and motion styles
 /neon-bastion/         index, beta, support, privacy, data
@@ -39,7 +39,16 @@ All effects run locally without third-party services or stored preferences.
 The featured game rises and grows while neighboring cards shrink, angle back, and
 tuck behind it. These transforms leave the carousel's scroll positions stable.
 
-The beta-request form has a separate Cloudflare endpoint and Turnstile spam check.
+Shared signup is a Google Group link, with separate per-game Play opt-in steps.
+Set `AVEK_BETA_COMMUNITY.groupSlug` in `beta/config.js` only after the actual group
+and join flow are verified; an empty value shows an honest unavailable state.
+Set `thornmarchClosedTestReady` to `true` only after verifying the closed track
+uses that group and its Play opt-in works. Neither value changes Neon Bastion's
+existing enrollment flow. Do not use the internal-test URL for the closed test.
+Glassmarch shares community updates without claiming a public build is available.
+
+The optional private request form does not subscribe people or join the group.
+It has a separate Cloudflare endpoint and Turnstile spam check.
 Its public endpoint and site key are in `beta/config.js`; empty values leave the
 form disabled with a working email fallback. Never put API tokens or a Turnstile
 secret key here. The private handoff repository contains the Worker, setup steps,

@@ -3,27 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AVEK — Beta requests</title>
-<meta name="description" content="Tell AVEK which game you would like to test. Request beta information for Neon Bastion, Thornmarch, or Glassmarch.">
+<title>AVEK — Join the playtest</title>
+<meta name="description" content="Join the AVEK community for playtesting and news from Neon Bastion, Thornmarch, and Glassmarch. Find each game’s next steps and send private feedback.">
 <link rel="icon" href="../neon-bastion/img/icon-32.png">
 <link rel="stylesheet" href="../site.css">
 <link rel="stylesheet" href="beta.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to request form</a>
+<a class="skip" href="#main">Skip to beta signup</a>
 <header class="bar"><a class="mark" href="../index.html">AVEK</a><nav class="games" aria-label="Games"><a href="../neon-bastion/index.html">Neon Bastion</a><a href="../thornmarch/index.html">Thornmarch</a><a href="../glassmarch/index.html">Glassmarch</a></nav></header>
 <main id="main">
-  <div class="intro"><p class="eyebrow">PLAY A PART</p><h1>Help shape<br>what comes next.</h1><p>Three games, at different stages. Tell us which world you want to spend time in, and we’ll reply when we have next steps to share.</p></div>
-  <aside class="existing"><strong>Ready to test Neon Bastion?</strong><p>Its Android closed test already has a sign-up path.</p><a href="../neon-bastion/beta.html">Go to the Neon Bastion testing steps <span aria-hidden="true">→</span></a></aside>
+  <div class="intro"><p class="eyebrow">PLAY A PART</p><h1>Three worlds.<br>One community.</h1><p>Help shape AVEK’s games. Join our community for playtest invitations, development news, and Glassmarch updates, then choose the games you want to explore.</p></div>
+  <section class="community" id="join-avek" aria-labelledby="join-title">
+    <p class="eyebrow">01 / JOIN AVEK</p><h2 id="join-title">Your next adventure starts here.</h2>
+    <p>One Google Group brings the AVEK community together. For Android playtests, join with the Google account you use on your phone. You’ll still opt into each game separately on Google Play.</p>
+    <a id="community-join" class="btn" hidden>Join the AVEK community <span aria-hidden="true">↗</span></a>
+    <p id="community-status" class="availability" role="status">Shared signup is coming soon. Neon Bastion’s current testing steps are available below.</p>
+    <p class="help">Joining subscribes you to AVEK game news and testing invitations. You can change email delivery or leave in Google Groups. Leaving a tester group can end access to its Play tests. <a href="../website-privacy.html#community">Community privacy</a>.</p>
+    <noscript><p>Enable JavaScript to see shared signup availability. Neon Bastion’s testing link and our email contact work without it.</p></noscript>
+  </section>
+  <section class="playtests" aria-labelledby="playtests-title">
+    <p class="eyebrow">02 / CHOOSE YOUR WORLD</p><h2 id="playtests-title">A different journey in every game.</h2>
+    <div class="test-grid">
+      <article class="test-card nb-choice"><img src="../turret.svg" alt="" width="36" height="36"><p class="platform">ANDROID · CLOSED TEST</p><h3>Neon Bastion</h3><p>Hold the line. Its existing tester group and installation steps are ready for you.</p><a href="../neon-bastion/beta.html">Neon Bastion testing steps <span aria-hidden="true">→</span></a></article>
+      <article class="test-card tm-choice"><img src="../thorn.svg" alt="" width="36" height="36"><p class="platform" id="thornmarch-stage">ANDROID · INTERNAL TEST</p><h3>Thornmarch</h3><p id="thornmarch-status">The wider playtest is being prepared. The shared group will carry invitations when it opens.</p><a id="thornmarch-opt-in" hidden>Opt into Thornmarch on Google Play <span aria-hidden="true">↗</span></a><p id="thornmarch-switch" class="help" hidden>Already an internal tester? Leave Thornmarch’s internal test first, then use this closed-test link with the same Google account you used to join AVEK.</p></article>
+      <article class="test-card gm-choice"><img src="../glass.svg" alt="" width="36" height="36"><p class="platform">PC · EARLY PROTOTYPE</p><h3>Glassmarch</h3><p>Follow a world taking shape. The AVEK group will share development news and future testing opportunities; there is no public build yet.</p><a href="#join-avek">Follow Glassmarch through AVEK <span aria-hidden="true">↑</span></a></article>
+    </div>
+  </section>
+  <section class="private-contact" aria-labelledby="contact-title">
+  <p class="eyebrow">LET’S TALK</p><h2 id="contact-title">Send us a private request.</h2><p class="contact-intro">Questions, device details, or feedback? This form goes to AVEK directly. It does not join the group or subscribe you to news.</p>
   <form id="beta-request" aria-label="Beta request" novalidate>
     <fieldset id="request-fields" disabled>
       <legend>Which game interests you?</legend>
       <div class="game-options">
         <label class="game-choice nb-choice"><input type="radio" name="game" value="neon-bastion" required><span><img src="../turret.svg" alt="" width="36" height="36"><strong>Neon Bastion</strong><small>Android · Closed test</small></span></label>
-        <label class="game-choice tm-choice"><input type="radio" name="game" value="thornmarch" required><span><img src="../thorn.svg" alt="" width="36" height="36"><strong>Thornmarch</strong><small>Android · Internal test</small></span></label>
+        <label class="game-choice tm-choice"><input type="radio" name="game" value="thornmarch" required><span><img src="../thorn.svg" alt="" width="36" height="36"><strong>Thornmarch</strong><small>Android</small></span></label>
         <label class="game-choice gm-choice"><input type="radio" name="game" value="glassmarch" required><span><img src="../glass.svg" alt="" width="36" height="36"><strong>Glassmarch</strong><small>PC · Early prototype</small></span></label>
       </div>
-      <p class="form-note">Submitting a request does not automatically enroll you in a test or guarantee a build. Thornmarch and Glassmarch do not have public beta access yet.</p>
+      <p class="form-note">Submitting a request does not automatically enroll you in a test or guarantee a build. Use the community signup and each game’s testing steps above to join an available playtest.</p>
       <div class="fields">
         <label for="email">Email address <span aria-hidden="true">*</span></label>
         <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-help">
@@ -44,9 +61,11 @@
     <p class="email-fallback">Prefer email? <a href="mailto:beta@avek.games?subject=AVEK%20beta%20request">Send us a beta request</a>.</p>
     <noscript><p>Please use the email link to contact us; this form needs JavaScript for spam protection.</p></noscript>
   </form>
+  </section>
   <footer><a href="../index.html">Back to AVEK</a><a href="../website-privacy.html">Website privacy</a></footer>
 </main>
 <script src="config.js"></script>
+<script src="community.js"></script>
 <script src="beta.js"></script>
 </body>
 </html>

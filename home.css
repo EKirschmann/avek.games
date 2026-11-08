@@ -57,7 +57,7 @@
 .section-note { font-size: .85rem; color: var(--dim); margin: 0 0 10px; }
 .section-top h2 { font-size: clamp(2.5rem,4.2vw,4rem); letter-spacing: -.035em; color: var(--paper); margin: 0; }
 .collection-note { color: var(--dim); font-size: .95rem; margin: 0 0 8px; }
-.rail { position: relative; display: flex; gap: 28px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 24px calc((100% - var(--card))/2) 28px; touch-action: pan-x pan-y; }
+.rail { position: relative; display: flex; gap: 28px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 48px calc((100% - var(--card))/2) 58px; touch-action: pan-x pan-y; }
 .rail::-webkit-scrollbar { display: none; }
 /* JS settles the rail after native momentum ends. Leaving CSS snap enabled
    during a buffer reset can make browsers snap to an outdated copy on relayout. */
@@ -65,11 +65,14 @@
 .rail:focus-visible { outline-offset: -3px; }
 .rail.is-dragging, .rail.is-snapping { scroll-snap-type: none; }
 .rail.is-dragging { cursor: grabbing; user-select: none; }
-.game { --accent: var(--p); position: relative; flex: 0 0 var(--card); min-width: 0; scroll-snap-align: center; background: #0c1117; border: 1px solid #ffffff12; border-radius: 3px; overflow: hidden; transition: opacity .45s,transform .45s,filter .45s,border-color .45s; }
+.game { --accent: var(--p); position: relative; flex: 0 0 var(--card); min-width: 0; scroll-snap-align: center; background: #0c1117; border: 1px solid #ffffff12; border-radius: 3px; overflow: hidden; transform-origin: center; transition: opacity .55s,transform .65s cubic-bezier(.2,.7,.25,1),filter .55s,border-color .55s,box-shadow .55s; }
 .nb-card { --p: var(--nb); }.tm-card { --p: var(--tm); }.gm-card { --p: var(--gm); }
-.showcase.live .game:not(.is-current) { opacity: .36; filter: saturate(.55); cursor: pointer; }
-.showcase.live .game.is-current { border-color: color-mix(in srgb,var(--p) 26%,transparent); }
-.showcase.live .game:not(.is-current):hover { opacity: .62; }
+/* Transforms change presentation, while the rail keeps stable layout positions
+   for swiping and seamless wrap resets. Side cards tuck behind the featured game. */
+.showcase.live .game:not(.is-current) { z-index: 0; opacity: .42; filter: saturate(.5) brightness(.75); transform: translate(var(--recede-x,0%),36px) perspective(1400px) rotateY(var(--turn,0deg)) scale(.78); cursor: pointer; }
+.showcase.live .game.is-current { z-index: 2; transform: translateY(-10px) scale(1.04); border-color: color-mix(in srgb,var(--p) 48%,transparent); box-shadow: 0 30px 48px #0009,0 0 40px color-mix(in srgb,var(--p) 9%,transparent); }
+.showcase.live .game:not(.is-current):hover { opacity: .66; }
+.studio.motion-paused .game { transition: none; }
 .shot { height: clamp(250px,29vw,405px); position: relative; overflow: hidden; }
 .shot > img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
 .shot::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,transparent 65%,#0c1117); pointer-events: none; }
@@ -140,7 +143,8 @@
  .opening { grid-template-columns: 1fr; padding: 54px 24px 82px; min-height: auto; }.intro { padding-bottom: 0; }.intro h1 { font-size: clamp(3.7rem,10.4vw,5.7rem); max-width: none; }.intro p { margin: 22px 0; }
  .worlds { height: 370px; width: 96%; margin: 34px auto 10px; gap: 12px; }.world-name { font-size: 1rem; }.world-symbol { width: 36px; height: 36px; left: calc(50% - 18px); bottom: 65px; }
  .opening-foot { left: 24px; right: 24px; bottom: 20px; }.opening-foot p { font-size: .75rem; }.motion-toggle { font-size: .75rem; gap: 6px; }
- .showcase { --card: 86vw; padding-top: 62px; }.section-top { width: calc(100% - 48px); margin-bottom: 18px; }.collection-note { display: none; }.section-top h2 { font-size: 2.8rem; }.rail { gap: 16px; padding-top: 16px; }.shot { height: 260px; }.platform { top: 16px; left: 20px; }
+ .showcase { --card: 86vw; padding-top: 62px; }.section-top { width: calc(100% - 48px); margin-bottom: 18px; }.collection-note { display: none; }.section-top h2 { font-size: 2.8rem; }.rail { gap: 16px; padding-top: 28px; padding-bottom: 38px; }.shot { height: 260px; }.platform { top: 16px; left: 20px; }
+ .showcase.live .game.is-current { transform: translateY(-6px) scale(1.02); }.showcase.live .game:not(.is-current) { transform: translate(var(--recede-x,0%),28px) perspective(1400px) rotateY(var(--turn,0deg)) scale(.8); }
  .about { grid-template-columns: 1fr; gap: 20px; padding: 25px 25px 30px; }.name { padding-left: 48px; position: relative; }.game-emblem { position: absolute; left: 0; top: 10px; width: 30px; height: 30px; }.game h3 { font-size: 2.4rem; margin-top: 6px; }.game .kind { font-size: .85rem; }.game .pitch { font-size: .95rem; }.game .status { font-size: .78rem; }.game .go { font-size: .9rem; }.game .btn { padding-inline: 18px; }
  .steer { width: 86vw; }.dots { gap: 1px; }.dots button { width: 36px; height: 44px; }.dots button[aria-current='true']::after { width: 30px; }.step { width: 44px; height: 44px; }.rail-arrows { gap: 8px; }.rail-count { gap: 8px; }.count-rule { width: 22px; }
  .studio-story { grid-template-columns: 1fr; width: calc(100% - 48px); margin: 76px auto; gap: 28px; padding: 0; }.story-mark { width: 75%; max-width: 380px; margin: 0 auto; padding: 18px; }.studio-story h2 { font-size: 3rem; }.studio-story p { max-width: 48ch; }

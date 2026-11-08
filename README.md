@@ -34,6 +34,8 @@ arrows, mouse drag, and touch swipes, without auto-advancing. Hash links select 
 the default remains Thornmarch. Decorative shield pulses, embers, and glass fragments
 can be paused, respect reduced-motion preferences, and pause when offscreen or hidden.
 All effects run locally without third-party services or stored preferences.
+The featured game rises and grows while neighboring cards shrink, angle back, and
+tuck behind it. These transforms leave the carousel's scroll positions stable.
 
 ## Play Console fields
 

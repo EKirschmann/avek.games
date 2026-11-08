@@ -59,7 +59,11 @@
 		if (logical === current) return;
 		current = logical;
 		items.forEach(function (item) {
-			var active = Number(item.dataset.index) === current;
+			var relative = mod(Number(item.dataset.index) - current);
+			if (relative > count / 2) relative -= count;
+			var active = relative === 0;
+			item.style.setProperty('--recede-x', relative < 0 ? '24%' : relative > 0 ? '-24%' : '0%');
+			item.style.setProperty('--turn', relative < 0 ? '10deg' : relative > 0 ? '-10deg' : '0deg');
 			item.classList.toggle('is-current', active);
 			if (item.dataset.clone) return;
 			if (active) item.removeAttribute('aria-hidden');

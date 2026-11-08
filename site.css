@@ -9,6 +9,7 @@
    embeds no third-party fonts. */
 @font-face { font-family: Rajdhani; src: url("/fonts/Rajdhani-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: Rajdhani; src: url("/fonts/Rajdhani-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Pirata One"; src: url("/fonts/PirataOne-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 @font-face { font-family: Barlow; src: url("/fonts/Barlow-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 :root {
@@ -262,7 +263,7 @@ footer a { color: var(--dim); }
 .vista-words { position: absolute; z-index: 1; top: clamp(28px, 6vw, 72px); left: max(24px, calc((100vw - 1132px) / 2)); max-width: 30rem; }
 .vista h1 { font-size: clamp(3rem, 8vw, 5.6rem); color: #fff; letter-spacing: .04em; text-shadow: 0 2px 24px rgba(4, 7, 10, .6); }
 .vista .lede { color: #f1f4ff; margin-top: .6rem; text-shadow: 0 1px 12px rgba(4, 7, 10, .85); }
-.vista .horizon { position: absolute; z-index: 1; left: 0; right: 0; bottom: -17px; height: 34px; color: var(--gm); }
+.vista .horizon { position: absolute; z-index: 1; left: 0; right: 0; bottom: -17px; height: 34px; color: var(--accent); }
 .status-line { color: var(--dim); }
 
 .road, .reel, .beyond { max-width: 1132px; margin: 0 auto; padding: 0 24px; }
@@ -273,7 +274,7 @@ footer a { color: var(--dim); }
 .road figure { margin: 0; }
 .road img, .reel img, .beyond img, .clips video, .beyond video, .clip video { display: block; width: 100%; height: auto; background: #0b1119; border: 1px solid #1c2a3c; }
 .road h3 { margin: 0 0 .5rem; color: #eef2ff; }
-.road h3::before { content: counter(stop); display: block; font-size: 1rem; font-weight: 700; color: var(--gm); margin-bottom: .2rem; }
+.road h3::before { content: counter(stop); display: block; font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: .2rem; }
 .road p { color: #c4ccdf; }
 
 .reel-note { color: var(--dim); }
@@ -299,9 +300,9 @@ figure.clip { margin: 1.6rem 0 2rem; }
 	.after-road { padding: 1rem 16px 80px; }
 }
 /* Glassmarch's text shares the pictures' left edge rather than a centred column. */
-.gm main, .gm .after-road { max-width: 1132px; }
-.gm .sub { max-width: var(--measure); }
-.gm footer { max-width: var(--measure); }
+.gm main, .gm .after-road, .tm main, .tm .after-road { max-width: 1132px; }
+.gm .sub, .tm .sub { max-width: var(--measure); }
+.gm footer, .tm footer { max-width: var(--measure); }
 .gm figure.clip { max-width: 760px; }
 
 /* Glassmarch's plate: its faceted horizon is the cut edge of a pane, and through the pane
@@ -320,3 +321,30 @@ figure.clip { margin: 1.6rem 0 2rem; }
 	.plate .pane .horizon { animation: none; }
 }
 @media (max-width: 640px) { .plate .pane { height: 136px; } }
+
+/* ---- Thornmarch: the game's own blackletter, phone-shaped frames --------
+   Headings take Pirata One, the face the game sets its own titles in. It is a phone
+   game played in portrait, so its clips and screens stand in tall frames, side by side. */
+.tm h1, .tm h2, .tm .road h3 { font-family: "Pirata One", Rajdhani, serif; font-weight: 400; letter-spacing: .01em; }
+.tm h2 { font-size: 2.1rem; }
+.tm .road h3 { font-size: 1.6rem; }
+.tm .road h3::before { font-family: Rajdhani, sans-serif; font-weight: 700; }
+.tm .vista h1 { letter-spacing: .02em; }
+.tm .vista img { object-position: 50% 50%; }
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 260px)); gap: 28px; margin: 1.4rem 0 0; }
+.phones figure { margin: 0; }
+.phones img, .phones video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; border: 1px solid #2a1c18; background: #120c0a; }
+.patrons figure.wide { margin: 1.4rem 0 0; }
+.patrons figure.wide img { display: block; width: 100%; height: auto; border: 1px solid #2a1c18; }
+.road figure.wide { margin: 1.2rem 0 2rem; }
+.road figure.wide video { display: block; width: 100%; height: auto; }
+table { border-collapse: collapse; margin: 1.6rem 0 0; width: 100%; max-width: 560px; }
+th, td { text-align: left; padding: .55rem 1rem .55rem 0; border-bottom: 1px solid var(--line); }
+thead th { color: var(--dim); font-weight: 400; font-size: .92rem; }
+tbody th { font-family: "Pirata One", serif; font-weight: 400; font-size: 1.35rem; }
+.p-ember { color: #ff8a3d; } .p-briar { color: #7fc96a; } .p-rime { color: #a9dcff; }
+.p-storm { color: #f2cf5b; } .p-blight { color: #b4c94a; } .p-umbral { color: #b39bff; }
+@media (max-width: 640px) {
+	.phones { grid-template-columns: 1fr 1fr; gap: 16px; }
+	.tm h2 { font-size: 1.85rem; }
+}

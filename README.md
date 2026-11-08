@@ -15,7 +15,8 @@ must never be copied here.
 /site.css              shared styling
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
-/thornmarch/            index, support, privacy, data
+/thornmarch/            index, devlog, support, privacy, data
+/thornmarch/media/      web stills and phone screens (WebP) and muted WebM loops with posters
 /glassmarch/            index and devlog (PC, early prototype; no policy pages until it is distributed)
 /glassmarch/media/      web stills (WebP, 1200 and 2000 wide) and muted WebM loops with posters
 /loops.js               plays muted loops only while on screen; none under reduced motion

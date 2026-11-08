@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Thornmarch</title>
-<meta name="description" content="Thornmarch: a dark-fantasy roguelite for Android. Stand your ground, loose your arrows, and bind cursed patrons to your bow.">
+<meta name="description" content="Thornmarch: a dark-fantasy roguelite for Android phones. March through six cursed realms, take the blessings of rival patrons, and build a hero who will not fall the same way twice.">
 <link rel="stylesheet" href="../site.css">
 <body class="tm">
 
@@ -16,32 +16,131 @@
 	</nav>
 </header>
 
-<main>
-	<nav class="sub" aria-label="Thornmarch"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="data.html">Your data</a></nav>
-
-	<div class="game-head">
-		<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 22 H400"/><path d="M18 22 l9 -9 M50 22 l-9 9 M82 22 l9 -9 M114 22 l-9 9 M146 22 l9 -9 M178 22 l-9 9 M210 22 l9 -9 M242 22 l-9 9 M274 22 l9 -9 M306 22 l-9 9 M338 22 l9 -9 M370 22 l-9 9"/></svg>
-		<img class="emblem" src="../thorn.svg" alt="">
+<header class="vista">
+	<picture>
+		<source media="(max-width: 640px)" srcset="media/s01-portrait-1080.webp">
+		<img src="media/s01-2000.webp" srcset="media/s01-1200.webp 1200w, media/s01-2000.webp 2000w" sizes="100vw"
+			width="2000" height="1125" fetchpriority="high"
+			alt="A hero in red and black looses a burning arrow across dark stone tiles as demons close in among crimson crystals.">
+	</picture>
+	<div class="vista-words">
 		<h1>Thornmarch</h1>
-	<p class="lede">Stand your ground, loose your arrows, and bind cursed patrons to your bow.</p>
+		<p class="lede">A dark-fantasy roguelite for phones. March through six cursed realms, take the
+		blessings of rival patrons, and build a hero who will not fall the same way twice.</p>
 	</div>
+	<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="glow" d="M0 22 H400"/><path d="M18 22 l9 -9 M50 22 l-9 9 M82 22 l9 -9 M114 22 l-9 9 M146 22 l9 -9 M178 22 l-9 9 M210 22 l9 -9 M242 22 l-9 9 M274 22 l9 -9 M306 22 l-9 9 M338 22 l9 -9 M370 22 l-9 9"/></svg>
+</header>
 
-	<p>A dark-fantasy roguelite for Android phones, played in portrait with one thumb. March across ruined platforms
-	floating over an abyss, room by room. You shoot only while you stand still, so every step is a choice
-	between dodging and dealing damage.</p>
+<main>
+	<nav class="sub" aria-label="Thornmarch"><a href="devlog.html">Devlog</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="data.html">Your data</a></nav>
 
-	<h2>Patrons and pacts</h2>
-	<p>Each level brings a choice of three blessings from cursed patrons: Ember&rsquo;s stacking burn,
-	Briar&rsquo;s snaring thorns, Rime&rsquo;s freezes that shatter. Bond with up to three in a run. Any two of
-	them can seal a pact that turns one patron&rsquo;s power into the other&rsquo;s trigger.</p>
+	<p>Thornmarch is a one-thumb action roguelite for Android. Move to dodge, stand still to shoot.
+	Each march is fifteen rooms with a Guardian at the end, and every level-up offers blessings from
+	six patrons: Ember, Briar, Rime, Storm, Blight and Umbral. Mix them, and your arrows burn, snare,
+	freeze, arc, rot or hex. Between runs, gear, relics and sigils carry your progress forward, and
+	the blacksmith forges three of the same piece into something better.</p>
+	<p class="status-line">An early build in internal testing on Google Play. No release date yet.</p>
+</main>
 
+<section class="reel" aria-labelledby="play-h">
+	<h2 id="play-h">Move to dodge, stand still to shoot</h2>
+	<div class="phones">
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip01-poster.webp" width="540" height="960" aria-label="A wave of goblins in the Thornwood falls to fireballs"><source src="media/clip01.webm" type="video/webm"></video>
+			<figcaption>A Thornwood wave falls to fireballs. Real gameplay, HUD on.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip04-poster.webp" width="540" height="960" aria-label="The staff, sceptre, daggers and scythe in turn"><source src="media/clip04.webm" type="video/webm"></video>
+			<figcaption>Staff, sceptre, daggers and scythe, in that order.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip02-poster.webp" width="540" height="960" aria-label="The Pass Colossus fight"><source src="media/clip02.webm" type="video/webm"></video>
+			<figcaption>The Pass Colossus fight. Its shield takes the first hits.</figcaption></figure>
+	</div>
+</section>
+
+<section class="reel patrons" aria-labelledby="patrons-h">
+	<h2 id="patrons-h">Six patrons</h2>
+	<p>Each patron offers its own blessings, and its mark on foes ties them together. Six patrons.
+	Three may answer you in one run.</p>
+	<figure class="wide"><img src="media/s15-1200.webp" srcset="media/s15-1200.webp 1200w, media/s15-2000.webp 2000w" sizes="(max-width: 1180px) 100vw, 1084px" width="1200" height="675" loading="lazy" decoding="async"
+		alt="Six armoured heroes side by side, one in each patron's Legendary set: Ember, Briar, Rime, Storm, Blight and Umbral.">
+		<figcaption>Six patrons, six Legendary sets. Four Legendary pieces of one patron make a set: its armour, its colours, and its blessings first.</figcaption></figure>
+	<table>
+		<thead><tr><th scope="col">Patron</th><th scope="col">Title</th><th scope="col">Mark on foes</th></tr></thead>
+		<tbody>
+			<tr><th scope="row" class="p-ember">Ember</th><td>“The Cinder Saint”</td><td>Smoulder</td></tr>
+			<tr><th scope="row" class="p-briar">Briar</th><td>“The Thorn Mother”</td><td>Snare</td></tr>
+			<tr><th scope="row" class="p-rime">Rime</th><td>“The Pale Widow”</td><td>Chill</td></tr>
+			<tr><th scope="row" class="p-storm">Storm</th><td>“The Bell-Ringer”</td><td>Static</td></tr>
+			<tr><th scope="row" class="p-blight">Blight</th><td>“The Rot Abbot”</td><td>Rot</td></tr>
+			<tr><th scope="row" class="p-umbral">Umbral</th><td>“The Hollow Choir”</td><td>Hex</td></tr>
+		</tbody>
+	</table>
+</section>
+
+<section class="road" aria-labelledby="march-h">
+	<h2 id="march-h">The march</h2>
+	<p class="reel-note">Six chapters, fifteen rooms each, and a Guardian at the end.</p>
+	<figure class="wide"><video class="loop" muted loop playsinline preload="none" poster="media/clip03-poster.webp" width="960" height="540" aria-label="A walk through all six chapters"><source src="media/clip03.webm" type="video/webm"></video>
+		<figcaption>A walk through all six chapters, from the Ruined March to the Ember Deep.</figcaption></figure>
+	<ol>
+		<li>
+			<figure><img src="media/s02-1200.webp" srcset="media/s02-1200.webp 1200w, media/s02-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="A hero on cracked stone tiles among ruined statues, deserters advancing."></figure>
+			<div><h3>The Ruined March</h3>
+			<p>“Ruins drift in the dark.” Broken walls, deserters with rusty swords, and the Ruin Giant at the end, who charges when he loses patience.</p></div>
+		</li>
+		<li>
+			<figure><img src="media/s03-1200.webp" srcset="media/s03-1200.webp 1200w, media/s03-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="Green goblins swarming across a mossy stone floor toward the hero."></figure>
+			<div><h3>The Thornwood</h3>
+			<p>“Goblins crawl out of the briars.” They come at you from the side and dart between the roots. The Briar Troll calls more of them when it is hurt.</p></div>
+		</li>
+		<li>
+			<figure><img src="media/s04-1200.webp" srcset="media/s04-1200.webp 1200w, media/s04-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="A snowy pass of pale stone, ice statues and a hero firing at wolves."></figure>
+			<div><h3>The Frostfang Pass</h3>
+			<p>“Wolves howl through the pass.” Wolves circle, crouch and lunge. Hunters loose three arrows at once. The Pass Colossus shields itself and slams the ice.</p></div>
+		</li>
+		<li>
+			<figure><img src="media/s05-1200.webp" srcset="media/s05-1200.webp 1200w, media/s05-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="Dark teal catacombs with gravestones, skeletons rising around the hero."></figure>
+			<div><h3>The Drowned Catacombs</h3>
+			<p>“The drowned dead rise.” Skeletons plod, then lurch. The Drowned King raises the dead around him.</p></div>
+		</li>
+		<li>
+			<figure><img src="media/s06-1200.webp" srcset="media/s06-1200.webp 1200w, media/s06-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="Pale sandstone spires and obelisks, a mummy shambling toward the hero."></figure>
+			<div><h3>The Sunken Spires</h3>
+			<p>“The wrapped dead stir in the spires.” Mummies shamble in slowly and hit hard. The Spire Colossus fires spirals of bolts.</p></div>
+		</li>
+		<li>
+			<figure><img src="media/s01-1200.webp" srcset="media/s01-1200.webp 1200w, media/s01-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async" alt="Demons among crimson crystals on dark stone, the hero loosing a burning arrow."></figure>
+			<div><h3>The Ember Deep</h3>
+			<p>“Demons rise from the heat.” Demons vanish and step out beside you mid-swing. The Ember Behemoth charges, and the ground burns where it lands.</p></div>
+		</li>
+	</ol>
+</section>
+
+<section class="reel" aria-labelledby="between-h">
+	<h2 id="between-h">Build your hero</h2>
+	<div class="phones">
+		<figure><img src="media/s09-720.webp" srcset="media/s09-480.webp 480w, media/s09-720.webp 720w" sizes="(max-width: 640px) 50vw, 260px" width="720" height="1280" loading="lazy" decoding="async" alt="A level-up screen offering three Ember blessings: Ember Rain, Pyre Pulse and Cinder Step.">
+			<figcaption>Level up and a patron makes an offer.</figcaption></figure>
+		<figure><img src="media/s11-720.webp" srcset="media/s11-480.webp 480w, media/s11-720.webp 720w" sizes="(max-width: 640px) 50vw, 260px" width="720" height="1280" loading="lazy" decoding="async" alt="The blacksmith at his anvil with three matching pieces ready to forge.">
+			<figcaption>The blacksmith: three of the same piece make one of the next rarity.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip05-poster.webp" width="540" height="960" aria-label="Three pieces forged into one at the anvil"><source src="media/clip05.webm" type="video/webm"></video>
+			<figcaption>Three of a kind to the anvil, three blows, and the sheet with what changed.</figcaption></figure>
+		<figure><img src="media/s13-720.webp" srcset="media/s13-480.webp 480w, media/s13-720.webp 720w" sizes="(max-width: 640px) 50vw, 260px" width="720" height="1280" loading="lazy" decoding="async" alt="The sigils screen: a hero surrounded by patron sigil slots in six colours.">
+			<figcaption>Sigils change one patron blessing whenever you take it.</figcaption></figure>
+		<figure><img src="media/s12-720.webp" srcset="media/s12-480.webp 480w, media/s12-720.webp 720w" sizes="(max-width: 640px) 50vw, 260px" width="720" height="1280" loading="lazy" decoding="async" alt="A grid of relic cards, some found and some still unknown.">
+			<figcaption>Relics stay with you and strengthen every run.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip06-poster.webp" width="540" height="960" aria-label="Two matching relic cards merging into one"><source src="media/clip06.webm" type="video/webm"></video>
+			<figcaption>Draw a relic you already hold and the two cards merge into one star higher.</figcaption></figure>
+	</div>
+</section>
+
+<div class="after-road">
 	<h2>Status</h2>
-	<p>In development. Not yet available on Google Play.</p>
+	<p>An early build in internal testing on Google Play. No ads or purchases in the current build.
+	No release date yet. The <a href="devlog.html">devlog</a> follows the work.</p>
 
 	<footer>
-		Thornmarch &middot; AVEK Solutions<br>
+		Thornmarch, made by AVEK.<br>
 		Privacy and support: <a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>
 	</footer>
-</main>
+</div>
+<script src="../loops.js" defer></script>
 </body>
 </html>

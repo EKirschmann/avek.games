@@ -250,3 +250,56 @@ footer a { color: var(--dim); }
 	.arc { height: 72px; }
 	.shots { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
 }
+
+/* ---- Glassmarch: a world seen through glass ------------------------------
+   The one game with real screens leads with one: a full-bleed vista that the faceted
+   horizon cuts off, the way a shard's edge would. Everything after it is a frame for
+   the pictures; the words stay short beside them. */
+.vista { position: relative; margin: 0; }
+.vista picture, .vista img { display: block; width: 100%; height: min(78svh, 760px); object-fit: cover; object-position: 50% 62%; }
+.vista::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+	background: linear-gradient(180deg, rgba(4, 7, 10, .55) 0%, rgba(4, 7, 10, 0) 38%, rgba(4, 7, 10, 0) 70%, var(--void) 100%); }
+.vista-words { position: absolute; z-index: 1; top: clamp(28px, 6vw, 72px); left: max(24px, calc((100vw - 1132px) / 2)); max-width: 30rem; }
+.vista h1 { font-size: clamp(3rem, 8vw, 5.6rem); color: #fff; letter-spacing: .04em; text-shadow: 0 2px 24px rgba(4, 7, 10, .6); }
+.vista .lede { color: #f1f4ff; margin-top: .6rem; text-shadow: 0 1px 12px rgba(4, 7, 10, .85); }
+.vista .horizon { position: absolute; z-index: 1; left: 0; right: 0; bottom: -17px; height: 34px; color: var(--gm); }
+.status-line { color: var(--dim); }
+
+.road, .reel, .beyond { max-width: 1132px; margin: 0 auto; padding: 0 24px; }
+.road h2, .reel h2, .beyond h2 { margin-top: 3.2rem; }
+/* The road is the route in order, so its stops are numbered. */
+.road ol { list-style: none; counter-reset: stop; padding: 0; margin: 1.6rem 0 0; }
+.road li { counter-increment: stop; display: grid; grid-template-columns: 7fr 5fr; gap: 32px; align-items: center; margin-bottom: 40px; max-width: none; }
+.road figure { margin: 0; }
+.road img, .reel img, .beyond img, .clips video, .beyond video, .clip video { display: block; width: 100%; height: auto; background: #0b1119; border: 1px solid #1c2a3c; }
+.road h3 { margin: 0 0 .5rem; color: #eef2ff; }
+.road h3::before { content: counter(stop); display: block; font-size: 1rem; font-weight: 700; color: var(--gm); margin-bottom: .2rem; }
+.road p { color: #c4ccdf; }
+
+.reel-note { color: var(--dim); }
+.clips, .stills { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 1.4rem 0 0; }
+.clips figure, .stills figure, .beyond figure, figure.clip { margin: 0; }
+figcaption { margin-top: .55rem; font-size: .9rem; line-height: 1.45; color: var(--dim); max-width: 60ch; }
+
+.beyond-words { max-width: 640px; }
+.beyond .rumour { color: var(--dim); font-style: italic; }
+.beyond figure.wide { margin-top: 1.6rem; }
+.after-road { max-width: 740px; margin: auto; padding: 1rem 24px 96px; }
+figure.clip { margin: 1.6rem 0 2rem; }
+.entry h2 { margin-top: 2.2rem; }
+
+@media (max-width: 960px) {
+	.road li { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 640px) {
+	.vista picture, .vista img { height: min(86svh, 640px); object-position: 50% 50%; }
+	.vista-words { left: 16px; right: 16px; }
+	.road, .reel, .beyond { padding: 0 16px; }
+	.clips, .stills { grid-template-columns: 1fr; gap: 20px; }
+	.after-road { padding: 1rem 16px 80px; }
+}
+/* Glassmarch's text shares the pictures' left edge rather than a centred column. */
+.gm main, .gm .after-road { max-width: 1132px; }
+.gm .sub { max-width: var(--measure); }
+.gm footer { max-width: var(--measure); }
+.gm figure.clip { max-width: 760px; }

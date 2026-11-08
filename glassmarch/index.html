@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Glassmarch</title>
-<meta name="description" content="Glassmarch: an action RPG for PC about an expedition reclaiming the Glassmarch. In early development.">
+<meta name="description" content="Glassmarch: a co-op dark-fantasy action RPG for PC. You and up to three friends relight the Glass Road, one shard at a time. An early prototype.">
 <link rel="stylesheet" href="../site.css">
 <body class="gm">
 
@@ -16,26 +16,154 @@
 	</nav>
 </header>
 
-<main>
-	<div class="game-head">
-		<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><polyline class="glow" points="0,30 34,14 58,24 96,6 130,20 152,12 196,28 228,10 262,22 290,8 330,26 362,12 400,22"/><polyline points="0,36 48,26 96,34 152,22 210,34 262,28 330,36 400,30" opacity=".45"/></svg>
-		<img class="emblem" src="../glass.svg" alt="">
+<header class="vista">
+	<picture>
+		<source media="(max-width: 640px)" srcset="media/s01-portrait-1080.webp">
+		<img src="media/s01-2000.webp" srcset="media/s01-1200.webp 1200w, media/s01-2000.webp 2000w" sizes="100vw"
+			width="2000" height="1125" fetchpriority="high"
+			alt="A walled hill town at golden hour, towers and a waterwheel above a valley, the sun low on the left horizon.">
+	</picture>
+	<div class="vista-words">
 		<h1>Glassmarch</h1>
-		<p class="lede">An expedition sets out to reclaim the Glassmarch.</p>
+		<p class="lede">A co-op dark-fantasy action RPG for PC. You and up to three friends relight
+		the Glass Road, a broken chain of ancient gates, one shard at a time.</p>
 	</div>
+	<svg class="horizon" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><polyline class="glow" points="0,30 34,14 58,24 96,6 130,20 152,12 196,28 228,10 262,22 290,8 330,26 362,12 400,22"/><polyline points="0,36 48,26 96,34 152,22 210,34 262,28 330,36 400,30" opacity=".45"/></svg>
+</header>
 
-	<p>An action RPG for PC. What you carry decides what you can do: your gear defines your
-	combat abilities, so a new find can change how you fight. Travel as a party of up to four,
-	people and companions together.</p>
+<main>
+	<nav class="sub" aria-label="Glassmarch"><a href="devlog.html">Devlog</a></nav>
 
+	<p>Long ago the gates of the Glass Road were shattered and their glass scattered. Now
+	everyone hostile is digging for it. Glassmarch is a third-person action RPG for one to four
+	players: you fight with whatever gear you carry, follow the road from a farm valley through a
+	drowned swamp and under the hills to a walled refuge, and wake each gate by finding the piece
+	of glass it is missing.</p>
+	<p class="status-line">An early prototype, built in Unity. No release date yet, and nothing to download here.</p>
+</main>
+
+<section class="road" aria-labelledby="road-h">
+	<h2 id="road-h">The road</h2>
+	<ol>
+		<li>
+			<figure><img src="media/s03-1200.webp" srcset="media/s03-1200.webp 1200w, media/s03-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="A farm valley of red-roofed houses and autumn trees under a pale sky."></figure>
+			<div>
+				<h3>Hearthvale</h3>
+				<p>Goblin-collared dogs on the east road, then a burned farm and a missing family. The
+				raid captain behind it carried “a shard of old glass, warm and faintly humming, and
+				orders: ‘More glass in the old stones. The chief pays in silver.’”</p>
+			</div>
+		</li>
+		<li>
+			<figure><img src="media/s04-1200.webp" srcset="media/s04-1200.webp 1200w, media/s04-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="A giant stone sword planted point-down on a green hill above the valley."></figure>
+			<div>
+				<h3>The Sword Gate</h3>
+				<p>A giant sword stands on the hill above Hearthvale, and it was there before the town.
+				“The ring of stones at its foot used to burn on midsummer nights. A road of glass, she
+				called it.” Fit the shard, and the first gate of the Glass Road burns again.</p>
+			</div>
+		</li>
+		<li>
+			<figure><img src="media/s06-1200.webp" srcset="media/s06-1200.webp 1200w, media/s06-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="A flooded stone ring glowing green and white inside a roofless chapel, lanterns at its foot."></figure>
+			<div>
+				<h3>Fenmire and the Drowned Gate</h3>
+				<p>Through the Sword Gate lies a swamp, and under a roofless chapel a flooded ring. It
+				flares and dies: “it only burned on its twin’s light. A piece of its own glass is
+				missing.” The goblins in the fen are digging at anything that looks old, and sorting what
+				they find. “Goblins don’t sort anything, love, not unless someone’s paying.”</p>
+			</div>
+		</li>
+		<li>
+			<figure><img src="media/s05-1200.webp" srcset="media/s05-1200.webp 1200w, media/s05-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="Dark trees and a plank road fading into thick blue-grey mist."></figure>
+			<div>
+				<h3>The statue room</h3>
+				<p>“Older than the goblins, older than the fen.” A winged watcher stands over an empty
+				cradle with fresh pick marks round it. “Whatever sat here, the goblins carried it off.”
+				Their war chief carries a curved piece of old glass that fits something.</p>
+			</div>
+		</li>
+		<li>
+			<figure><img src="media/s07-1200.webp" srcset="media/s07-1200.webp 1200w, media/s07-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="A glowing cyan gate ring in a ruined underground hall, broken stone across the floor."></figure>
+			<div>
+				<h3>The Sunken Vault and the Twin Gate</h3>
+				<p>Under the fen, the dead stand guard in a soldier’s colours. “These dead wear
+				Thornmarch’s old colours, turned. Someone is raising an army down here.” Seat the missing
+				piece in the Twin Gate, and “far underground another ring answers.”</p>
+			</div>
+		</li>
+		<li>
+			<figure><img src="media/s09-1200.webp" srcset="media/s09-1200.webp 1200w, media/s09-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 640px" width="1200" height="675" loading="lazy" decoding="async"
+				alt="A torch-lit mine entrance with rail tracks running into dark water."></figure>
+			<div>
+				<h3>The Underworld and Thornmarch</h3>
+				<p>The Twin Gate opens deep under the hills, in mines the miners abandoned. “The stone the
+				miners broke into was never empty.” Climb the old haul tunnel into daylight and the
+				soldiers at the quarry landing lower their spears: “Nobody’s come up that tunnel alive
+				since the miners quit it.”</p>
+			</div>
+		</li>
+	</ol>
+</section>
+
+<section class="reel" aria-labelledby="reel-h">
+	<h2 id="reel-h">In motion</h2>
+	<p class="reel-note">In-engine, HDRP with ray tracing, no HUD.</p>
+	<div class="clips">
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip01-poster.webp" width="960" height="540" aria-label="Golden hour over Thornmarch"><source src="media/clip01.webm" type="video/webm"></video>
+			<figcaption>Golden hour over Thornmarch.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip02-poster.webp" width="960" height="540" aria-label="Fenmire in mist"><source src="media/clip02.webm" type="video/webm"></video>
+			<figcaption>Fenmire, where the first gate’s twin lies drowned.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip03-poster.webp" width="960" height="540" aria-label="The Twin Gate in the Sunken Vault"><source src="media/clip03.webm" type="video/webm"></video>
+			<figcaption>The Twin Gate in the Sunken Vault. Far underground, another ring answers.</figcaption></figure>
+		<figure><video class="loop" muted loop playsinline preload="none" poster="media/clip06-poster.webp" width="960" height="540" aria-label="Five spells cast at a training dummy"><source src="media/clip06.webm" type="video/webm"></video>
+			<figcaption>Heal, Ward, Raise Skeleton, Frost Lance and Fireball, cast at a training dummy. A look at the effects, not a fight.</figcaption></figure>
+	</div>
+	<div class="stills">
+		<figure><img src="media/s02-1200.webp" srcset="media/s02-1200.webp 1200w, media/s02-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="A castle of spires and banners above a crowded lower town at golden hour.">
+			<figcaption>Thornmarch’s castle above the lower town.</figcaption></figure>
+		<figure><img src="media/s08-1200.webp" srcset="media/s08-1200.webp 1200w, media/s08-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="Armoured skeletons standing guard before the glowing Twin Gate.">
+			<figcaption>“These dead wear Thornmarch’s old colours, turned.”</figcaption></figure>
+		<figure><img src="media/s10-1200.webp" srcset="media/s10-1200.webp 1200w, media/s10-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="A hero in a market square casting a burst of orange fire.">
+			<figcaption>Fireball.</figcaption></figure>
+		<figure><img src="media/s12-1200.webp" srcset="media/s12-1200.webp 1200w, media/s12-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="Golden wings of light spread around a hero standing in a blue ring.">
+			<figcaption>Ward: wings of light and a ring underfoot.</figcaption></figure>
+	</div>
+</section>
+
+<section class="beyond" aria-labelledby="beyond-h">
+	<div class="beyond-words">
+		<h2 id="beyond-h">Beyond the road</h2>
+		<p>Sailors swear a ring stands on a wreckers’ harbour, half drowned at high tide. A dwarven
+		door in the mountain has been shut since the halls under the peaks fell. And one ring, they
+		say, has never burned at all: “Its twin was never on this world.”</p>
+		<p class="rumour">Rumours, for now. None of these places is playable yet.</p>
+	</div>
+	<figure class="wide"><video class="loop" muted loop playsinline preload="none" poster="media/clip07-poster.webp" width="960" height="540" aria-label="A slow orbit over a sunlit island chain"><source src="media/clip07.webm" type="video/webm"></video>
+		<figcaption>A look study for the pirate isles, built on Synty’s Pirate Isles demo map converted to HDRP. Not a built Glassmarch level yet.</figcaption></figure>
+	<div class="stills">
+		<figure><img src="media/s11a-1200.webp" srcset="media/s11a-1200.webp 1200w, media/s11a-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="Small islands backlit by a low sun on bright water.">
+			<figcaption>The pirate isles, sun on the water. Look study; the region is not built yet.</figcaption></figure>
+		<figure><img src="media/s11c-1200.webp" srcset="media/s11c-1200.webp 1200w, media/s11c-2000.webp 2000w" sizes="(max-width: 960px) 100vw, 540px" width="1200" height="675" loading="lazy" decoding="async" alt="An archipelago with a harbour town, a lighthouse and a smoking peak.">
+			<figcaption>A harbour town, a lighthouse and a smoking peak. Look study of a region still to come.</figcaption></figure>
+	</div>
+</section>
+
+<div class="after-road">
 	<h2>Status</h2>
-	<p>An early prototype. The core combat is playable; the campaign, progression and balance
-	are still being built. There is no release date yet, and nothing to download here.</p>
+	<p>An early prototype. The route from Hearthvale to Thornmarch plays end to end; the campaign,
+	progression and balance are still being built. There is no release date yet. The
+	<a href="devlog.html">devlog</a> follows the work.</p>
 
 	<footer>
 		Glassmarch, made by AVEK.<br>
 		Questions: <a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>
 	</footer>
-</main>
+</div>
+<script src="../loops.js" defer></script>
 </body>
 </html>

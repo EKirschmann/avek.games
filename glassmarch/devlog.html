@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glassmarch devlog</title>
+<meta name="description" content="Notes from building Glassmarch, a co-op action RPG for PC in early development.">
+<link rel="stylesheet" href="../site.css">
+<body class="gm">
+
+<header class="bar">
+	<a class="mark" href="../index.html">AVEK</a>
+	<nav class="games" aria-label="Games">
+		<a href="../neon-bastion/index.html">Neon Bastion</a>
+		<a href="../thornmarch/index.html">Thornmarch</a>
+		<a href="index.html" aria-current="true">Glassmarch</a>
+	</nav>
+</header>
+
+<main>
+	<nav class="sub" aria-label="Glassmarch"><a href="devlog.html" aria-current="page">Devlog</a></nav>
+
+	<h1>Devlog</h1>
+	<p class="lede">Notes from building Glassmarch. It is an early prototype; these are the
+	pieces that moved this month.</p>
+
+	<figure class="clip"><video class="loop" muted loop playsinline preload="none" poster="media/clip04-poster.webp" width="960" height="540" aria-label="Progress screenshots from a grey test arena to Fenmire"><source src="media/clip04.webm" type="video/webm"></video>
+		<figcaption>25 days, from a grey test arena on 14 October to Fenmire on 8 November, in our own progress screenshots, HUD and all.</figcaption></figure>
+
+	<article class="entry">
+		<h2>Moving to HDRP</h2>
+		<p>We are moving the game from Unity’s URP to HDRP. A trial copy runs the whole campaign
+		route (103 of 103 checks pass on the latest build) with ray-traced shadows and reflections,
+		and a golden-hour light we wanted after seeing it in an islands study. It isn’t finished:
+		the Fenmire mist still costs frames, and the settings menu is only partly built.</p>
+		<figure class="clip"><video class="loop" muted loop playsinline preload="none" poster="media/clip05-poster.webp" width="960" height="540" aria-label="The same spots in URP and then in HDRP"><source src="media/clip05.webm" type="video/webm"></video>
+			<figcaption>Same spots, same camera: the game in URP on 6 November, and in HDRP on 8 November.</figcaption></figure>
+	</article>
+
+	<article class="entry">
+		<h2>Fixes from playtests</h2>
+		<p>We played the whole route on 7 November, and the next day’s fixes came straight from it.
+		In Fenmire, companions could not leave a landing because a 0.64 m step split the walkable
+		ground. Dead trees floated and the lanterns blocked the boardwalk. Thornmarch’s arrival point
+		sat below the level’s fall-out line, so the player respawned every frame. Now every arrival
+		checks for ground, a walkable slope and room for a body before it places you.</p>
+	</article>
+
+	<article class="entry">
+		<h2>Built for a party</h2>
+		<p>Glassmarch is co-op first: one to four players in one shared world, with the host running
+		the fights so everyone sees the same blow land. This week the enemies started scaling with
+		the party. A full group of four meets tougher packs, hired companions and standing summons
+		count for part of a player, and a solo player gets exactly the game as tuned.</p>
+	</article>
+
+	<article class="entry">
+		<h2>The gate network</h2>
+		<p>Every gate on the Glass Road has a twin. Fit a shard into one ring and its partner, far
+		away, flares for a few seconds on its light and goes dark again until you find its own
+		missing glass. So far the route has two pairs, from Hearthvale’s Sword Gate to the Drowned
+		Gate in Fenmire, and from the Sunken Vault’s Twin Gate to the Buried Gate under Thornmarch.
+		Rumours of more are already written into the gate map.</p>
+	</article>
+
+	<footer>
+		Glassmarch, made by AVEK.<br>
+		Questions: <a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>
+	</footer>
+</main>
+<script src="../loops.js" defer></script>
+</body>
+</html>

@@ -16,7 +16,9 @@ must never be copied here.
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
 /thornmarch/            index, support, privacy, data
-/glassmarch/            index (PC, early prototype; no policy pages until it is distributed)
+/glassmarch/            index and devlog (PC, early prototype; no policy pages until it is distributed)
+/glassmarch/media/      web stills (WebP, 1200 and 2000 wide) and muted WebM loops with posters
+/loops.js               plays muted loops only while on screen; none under reduced motion
 /turret.svg, thorn.svg, glass.svg   one emblem per game, drawn in its accent
 ```
 

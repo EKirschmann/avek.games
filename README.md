@@ -13,6 +13,8 @@ must never be copied here.
 /app-ads.txt           NOT YET PRESENT - see below
 /privacy.html          legacy redirect, do not delete (see below)
 /site.css              shared styling
+/beta/                 beta-request form; activation requires verified Cloudflare setup
+/website-privacy.html   website requests, email forwarding, spam protection and providers
 /home.css              cinematic homepage, responsive game cards and motion styles
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
@@ -36,6 +38,13 @@ can be paused, respect reduced-motion preferences, and pause when offscreen or h
 All effects run locally without third-party services or stored preferences.
 The featured game rises and grows while neighboring cards shrink, angle back, and
 tuck behind it. These transforms leave the carousel's scroll positions stable.
+
+The beta-request form has a separate Cloudflare endpoint and Turnstile spam check.
+Its public endpoint and site key are in `beta/config.js`; empty values leave the
+form disabled with a working email fallback. Never put API tokens or a Turnstile
+secret key here. The private handoff repository contains the Worker, setup steps,
+and delivery checks. Do not merge this form until that setup and a real delivery
+test are complete. Existing Neon Bastion test-group and Play opt-in links remain.
 
 ## Play Console fields
 

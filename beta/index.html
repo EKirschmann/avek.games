@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AVEK — Beta requests</title>
+<meta name="description" content="Tell AVEK which game you would like to test. Request beta information for Neon Bastion, Thornmarch, or Glassmarch.">
+<link rel="icon" href="../neon-bastion/img/icon-32.png">
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="beta.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to request form</a>
+<header class="bar"><a class="mark" href="../index.html">AVEK</a><nav class="games" aria-label="Games"><a href="../neon-bastion/index.html">Neon Bastion</a><a href="../thornmarch/index.html">Thornmarch</a><a href="../glassmarch/index.html">Glassmarch</a></nav></header>
+<main id="main">
+  <div class="intro"><p class="eyebrow">PLAY A PART</p><h1>Help shape<br>what comes next.</h1><p>Three games, at different stages. Tell us which world you want to spend time in, and we’ll reply when we have next steps to share.</p></div>
+  <aside class="existing"><strong>Ready to test Neon Bastion?</strong><p>Its Android closed test already has a sign-up path.</p><a href="../neon-bastion/beta.html">Go to the Neon Bastion testing steps <span aria-hidden="true">→</span></a></aside>
+  <form id="beta-request" aria-label="Beta request" novalidate>
+    <fieldset id="request-fields" disabled>
+      <legend>Which game interests you?</legend>
+      <div class="game-options">
+        <label class="game-choice nb-choice"><input type="radio" name="game" value="neon-bastion" required><span><img src="../turret.svg" alt="" width="36" height="36"><strong>Neon Bastion</strong><small>Android · Closed test</small></span></label>
+        <label class="game-choice tm-choice"><input type="radio" name="game" value="thornmarch" required><span><img src="../thorn.svg" alt="" width="36" height="36"><strong>Thornmarch</strong><small>Android · Internal test</small></span></label>
+        <label class="game-choice gm-choice"><input type="radio" name="game" value="glassmarch" required><span><img src="../glass.svg" alt="" width="36" height="36"><strong>Glassmarch</strong><small>PC · Early prototype</small></span></label>
+      </div>
+      <p class="form-note">Submitting a request does not automatically enroll you in a test or guarantee a build. Thornmarch and Glassmarch do not have public beta access yet.</p>
+      <div class="fields">
+        <label for="email">Email address <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-help">
+        <p id="email-help" class="help">For Android testing, use the Google account on your phone.</p>
+        <label for="device">Phone or PC model <small>(optional)</small></label>
+        <input id="device" name="device" type="text" maxlength="120" autocomplete="off">
+        <label for="message">Anything you’d like us to know? <small>(optional)</small></label>
+        <textarea id="message" name="message" rows="4" maxlength="2000" aria-describedby="message-help"></textarea>
+        <p id="message-help" class="help">Please leave out passwords, save files, and sensitive personal details.</p>
+      </div>
+      <div class="trap" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <label class="consent"><input type="checkbox" name="consent" required><span>I’m 13 or older and would like AVEK to contact me about this request.</span></label>
+      <p class="help">We use your details to handle your request, not to subscribe you to marketing. <a href="../website-privacy.html">How we handle website requests</a>.</p>
+      <div id="spam-check"></div>
+      <button id="send-request" class="btn" type="submit" disabled>Send beta request</button>
+    </fieldset>
+    <p id="request-status" role="status" aria-live="polite">The request form is not available yet. You can contact us by email below.</p>
+    <p class="email-fallback">Prefer email? <a href="mailto:floridaairborne@gmail.com?subject=AVEK%20beta%20request">Send us a beta request</a>.</p>
+    <noscript><p>Please use the email link to contact us; this form needs JavaScript for spam protection.</p></noscript>
+  </form>
+  <footer><a href="../index.html">Back to AVEK</a><a href="../website-privacy.html">Website privacy</a></footer>
+</main>
+<script src="config.js"></script>
+<script src="beta.js"></script>
+</body>
+</html>

@@ -13,6 +13,8 @@ must never be copied here.
 /app-ads.txt           NOT YET PRESENT - see below
 /privacy.html          legacy redirect, do not delete (see below)
 /site.css              shared styling
+/beta/                 shared community signup, per-game testing steps and private request form
+/website-privacy.html   website requests, email forwarding, spam protection and providers
 /home.css              cinematic homepage, responsive game cards and motion styles
 /neon-bastion/         index, beta, support, privacy, data
 /neon-bastion/img/     optimised screenshots and icons (see below)
@@ -36,6 +38,26 @@ can be paused, respect reduced-motion preferences, and pause when offscreen or h
 All effects run locally without third-party services or stored preferences.
 The featured game rises and grows while neighboring cards shrink, angle back, and
 tuck behind it. These transforms leave the carousel's scroll positions stable.
+
+Shared signup is a Google Group link, with separate per-game Play opt-in steps.
+Set `AVEK_BETA_COMMUNITY.groupSlug` in `beta/config.js` only after the actual group
+and join flow are verified; an empty value shows an honest unavailable state.
+Set `thornmarchClosedTestReady` to `true` only after verifying the closed track
+uses that group and its Play opt-in works. Neither value changes Neon Bastion's
+existing enrollment flow. Do not use the internal-test URL for the closed test.
+Glassmarch shares community updates without claiming a public build is available.
+
+The optional private request form does not subscribe people or join the group.
+It has a separate Cloudflare endpoint and Turnstile spam check.
+Its public endpoint and site key are in `beta/config.js`; empty values leave the
+form disabled with a working email fallback. Never put API tokens or a Turnstile
+secret key here. The private handoff repository contains the Worker, setup steps,
+and delivery checks. Desktop setup verified production form delivery on November
+8, 2026; the public endpoint, site key and actual AVEK group are configured.
+Thornmarch's closed release is saved but not submitted for review, so its ready
+flag stays false. A non-owner group join has not yet been exercised. Before
+publishing the domain-contact replacements, verify incoming mail reaches both
+aliases. Existing Neon Bastion test-group and Play opt-in links remain.
 
 ## Play Console fields
 

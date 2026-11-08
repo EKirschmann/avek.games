@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Thornmarch — Your data and how to delete it</title>
-<meta name="description" content="Where Thornmarch keeps its settings and how to remove them.">
+<meta name="description" content="Where Thornmarch keeps settings and progress, including Google Play Games cloud saves, and how to remove them.">
 <link rel="stylesheet" href="../site.css">
 <body class="tm">
 
@@ -20,34 +20,45 @@
 	<nav class="sub" aria-label="Thornmarch"><a href="devlog.html">Devlog</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="data.html" aria-current="page">Your data</a></nav>
 
 	<h1>Your data and how to delete it</h1>
-	<p class="lede">Last reviewed November 3, 2026, for Thornmarch 0.1.1.</p>
+	<p class="lede">Last reviewed November 8, 2026, for Thornmarch 0.3.35.</p>
 
-	<p>Thornmarch has no account system and no server. The only thing it keeps is your settings, in a file on
-	your own phone. We never receive it, so there is nothing for us to delete on your behalf.</p>
+	<p>Thornmarch has no AVEK account system or developer-operated server. It keeps settings and progress
+	on your phone and, when you are signed in to Google Play Games, syncs a copy of your progress with
+	your Play Games account. AVEK cannot retrieve or delete those copies on your behalf.</p>
 
-	<h2>What the game stores, on your device</h2>
-	<p>Sound volume, screen shake, damage numbers, joystick size and the frame-rate display. A run in progress
-	is not saved; it ends when the app closes.</p>
+	<h2>What the game stores</h2>
+	<p><strong>On your device:</strong> settings such as sound volume, screen shake, damage numbers,
+	joystick size and the frame-rate display, plus progress such as gold, keys, gear, relics, sigils, hero
+	appearance, chapters cleared, quests and best results. A run in progress is not saved; it ends when
+	the app closes.</p>
+	<p><strong>In Google Play Games, while signed in:</strong> a copy of your progress through Saved Games.
+	The game merges cloud progress on sign-in and syncs later profile saves. Device settings are not synced.</p>
 
 	<h2>How to delete it yourself</h2>
 	<ul>
-		<li><strong>Remove the files:</strong> clear the app&rsquo;s storage in Android settings.</li>
-		<li><strong>Remove everything:</strong> uninstall the app.</li>
+		<li><strong>Local settings and progress:</strong> clear Thornmarch&rsquo;s storage in Android settings
+		or uninstall the app. This does not delete your cloud save.</li>
+		<li><strong>Cloud progress:</strong> close the game on your devices, then use Google Play Games
+		settings to delete Thornmarch&rsquo;s game data. Google&rsquo;s
+		<a href="https://support.google.com/googleplay/answer/9130646">game-data deletion instructions</a>
+		explain the current steps.</li>
+		<li><strong>Remove both copies:</strong> delete the local data on your devices and the Play Games
+		copy before reopening the game. A remaining local or cloud copy can sync again when you play signed in.</li>
 	</ul>
 
 	<h2>If you have emailed us</h2>
 	<p>Support correspondence is the only thing we actually hold: your email address and whatever you chose to
 	put in the message. To have it deleted, write to
-	<a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a> from the same address and say so.
+	<a href="mailto:eli@avek.games">eli@avek.games</a> from the same address and say so.
 	You do not need to give a reason.</p>
 
 	<h2>If this changes</h2>
-	<p class="ahead">When saved progress, sign-in, cloud saves, advertising or analytics are added, this page and
-	the <a href="privacy.html">privacy policy</a> will be updated before the feature ships.</p>
+	<p class="ahead">If new data handling is added, this page and the
+	<a href="privacy.html">privacy policy</a> will be updated to describe it.</p>
 
 	<footer>
 		Thornmarch &middot; Android package <code>games.avek.thornmarch</code><br>
-		Privacy and support: <a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>
+		Privacy and support: <a href="mailto:eli@avek.games">eli@avek.games</a>
 	</footer>
 </main>
 </body>

@@ -52,8 +52,12 @@ It has a separate Cloudflare endpoint and Turnstile spam check.
 Its public endpoint and site key are in `beta/config.js`; empty values leave the
 form disabled with a working email fallback. Never put API tokens or a Turnstile
 secret key here. The private handoff repository contains the Worker, setup steps,
-and delivery checks. Do not merge this form until that setup and a real delivery
-test are complete. Existing Neon Bastion test-group and Play opt-in links remain.
+and delivery checks. Desktop setup verified production form delivery on November
+8, 2026; the public endpoint, site key and actual AVEK group are configured.
+Thornmarch's closed release is saved but not submitted for review, so its ready
+flag stays false. A non-owner group join has not yet been exercised. Before
+publishing the domain-contact replacements, verify incoming mail reaches both
+aliases. Existing Neon Bastion test-group and Play opt-in links remain.
 
 ## Play Console fields
 

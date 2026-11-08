@@ -22,11 +22,13 @@
 	<h1>Thornmarch Privacy Policy</h1>
 	<p>Effective date: November 8, 2026</p>
 	<p>This policy covers the Thornmarch game, Android package <code>games.avek.thornmarch</code>,
-	and explains how its current offline gameplay handles information.</p>
+	and explains how version 0.3.35 handles information, including optional Google Play Games cloud saving.</p>
 
 	<h2>Information stored by the game</h2>
 	<p>Thornmarch stores your settings (sound volume, screen shake, damage numbers, joystick size and the
-	frame-rate display) on your device. A run in progress lives only in memory and ends when the app closes.
+	frame-rate display) and your game progress (such as gold, keys, gear, relics, sigils, hero appearance,
+	chapters cleared, quest progress and best results) on your device.
+	A run in progress lives only in memory and ends when the app closes.
 	This information is used to run the game. The game does not send it to us.</p>
 	<p>No game account is required. The game has no advertising SDK, analytics SDK, in-app purchases or
 	developer-operated servers. It does not collect or transmit your location, contacts, photos, microphone
@@ -42,13 +44,18 @@
 	<h2>Google Play Games</h2>
 	<p>On Android the game may sign you in to Google Play Games automatically, using the Play Games profile
 	already on your device. Google provides this service under its own privacy policy; we receive only what the
-	Play Games service shares with the game, such as your player ID and gamer name. If cloud saving is turned
-	on in a future version, your saved progress will be stored by Google in your Play Games account. You can
-	manage or delete your Play Games profile and its data in the Google Play Games settings.</p>
+	Play Games service shares with the game, such as your player ID and gamer name. While you are signed in,
+	the game reads and writes a copy of your progress using Google Play Games Saved Games. It merges saved
+	progress when sign-in succeeds and syncs subsequent profile saves, so progress can follow you across
+	devices. Settings stay on each device. The cloud copy is stored by Google, not on an AVEK server.
+	You can play without signing in; in that case, progress stays on your device. You can manage sign-in and
+	delete your Play Games profile or individual game data through Google Play Games settings.</p>
 
 	<h2>Retention and deletion</h2>
-	<p>Settings stay on your device until you clear the app&rsquo;s storage in Android settings or uninstall
-	the game. We cannot retrieve or erase information stored only on your device. Step-by-step instructions
+	<p>Settings and progress stay on your device until you clear the app&rsquo;s storage in Android settings
+	or uninstall the game. Deleting local files does not delete the cloud copy in Google Play Games;
+	signed-in play can restore saved progress. AVEK cannot delete that copy on your behalf.
+	Step-by-step instructions
 	are on the <a href="data.html">your data</a> page.</p>
 
 	<h2>Support correspondence</h2>
@@ -64,7 +71,7 @@
 	advertising, analytics, forms or third-party fonts.</p>
 	<p>The separate beta-request page uses Cloudflare for spam protection and request delivery.
 	See <a href="../website-privacy.html">website privacy</a> for how requests are handled.
-	This does not change the game’s offline data handling.</p>
+	Website requests and group membership are separate from the game’s saved progress.</p>
 
 	<h2>Children and future changes</h2>
 	<p>Thornmarch is intended for players aged 13 and over. It is not directed to children under 13, does not
